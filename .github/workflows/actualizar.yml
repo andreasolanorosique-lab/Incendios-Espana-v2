@@ -1,0 +1,39 @@
+name: Generar KML
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Ejecutar script
+        env:
+          FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
+        run: python generar_kml.py
+
+      - name: Ver estado de Git
+        run: |
+          git status
+          git diff --stat
+          ls -lh incendios_actual.kml
+          sha256sum incendios_actual.kml
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Actualizar KML"
+          add_options: "-A"
