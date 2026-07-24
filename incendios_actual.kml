@@ -46,6 +46,17 @@
         <scale>0</scale>
       </LabelStyle>
     </Style>
+    <Style id="lng">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/kml/shapes/harbor.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
     <Placemark>
       <styleUrl>#green</styleUrl>
       <name />
@@ -19604,5 +19615,127 @@
         <coordinates>-7.82923,43.65178,0</coordinates>
       </Point>
     </Placemark>
+    <Folder>
+      <name>🏭 Plantas de regasificación</name>
+      <Placemark>
+        <styleUrl>#lng</styleUrl>
+        <name>Barcelona</name>
+        <description>&lt;![CDATA[
+&lt;h2&gt;🏭 Barcelona&lt;/h2&gt;
+&lt;b&gt;Operador:&lt;/b&gt; Enagás&lt;br/&gt;
+&lt;b&gt;Almacenamiento:&lt;/b&gt; 760.000 m³&lt;br/&gt;
+&lt;b&gt;Regasificación:&lt;/b&gt; 544 GWh/día&lt;br/&gt;
+&lt;b&gt;Tanques:&lt;/b&gt; 6&lt;br/&gt;
+&lt;b&gt;Atraques:&lt;/b&gt; 2&lt;br/&gt;
+&lt;b&gt;Teléfono:&lt;/b&gt; +34 913 709 000&lt;br/&gt;
+&lt;b&gt;Web:&lt;/b&gt; &lt;a href='https://www.enagas.es'&gt;https://www.enagas.es&lt;/a&gt;
+]]&gt;</description>
+        <Point>
+          <coordinates>2.1568,41.3447,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#lng</styleUrl>
+        <name>Huelva</name>
+        <description>&lt;![CDATA[
+&lt;h2&gt;🏭 Huelva&lt;/h2&gt;
+&lt;b&gt;Operador:&lt;/b&gt; Enagás&lt;br/&gt;
+&lt;b&gt;Almacenamiento:&lt;/b&gt; 619.500 m³&lt;br/&gt;
+&lt;b&gt;Regasificación:&lt;/b&gt; 377 GWh/día&lt;br/&gt;
+&lt;b&gt;Tanques:&lt;/b&gt; 5&lt;br/&gt;
+&lt;b&gt;Atraques:&lt;/b&gt; 1&lt;br/&gt;
+&lt;b&gt;Teléfono:&lt;/b&gt; +34 913 709 000&lt;br/&gt;
+&lt;b&gt;Web:&lt;/b&gt; &lt;a href='https://www.enagas.es'&gt;https://www.enagas.es&lt;/a&gt;
+]]&gt;</description>
+        <Point>
+          <coordinates>-6.9448,37.1847,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#lng</styleUrl>
+        <name>Cartagena</name>
+        <description>&lt;![CDATA[
+&lt;h2&gt;🏭 Cartagena&lt;/h2&gt;
+&lt;b&gt;Operador:&lt;/b&gt; Enagás&lt;br/&gt;
+&lt;b&gt;Almacenamiento:&lt;/b&gt; 587.000 m³&lt;br/&gt;
+&lt;b&gt;Regasificación:&lt;/b&gt; 377 GWh/día&lt;br/&gt;
+&lt;b&gt;Tanques:&lt;/b&gt; 5&lt;br/&gt;
+&lt;b&gt;Atraques:&lt;/b&gt; 2&lt;br/&gt;
+&lt;b&gt;Teléfono:&lt;/b&gt; +34 913 709 000&lt;br/&gt;
+&lt;b&gt;Web:&lt;/b&gt; &lt;a href='https://www.enagas.es'&gt;https://www.enagas.es&lt;/a&gt;
+]]&gt;</description>
+        <Point>
+          <coordinates>-0.9675,37.5756,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#lng</styleUrl>
+        <name>Bilbao</name>
+        <description>&lt;![CDATA[
+&lt;h2&gt;🏭 Bilbao&lt;/h2&gt;
+&lt;b&gt;Operador:&lt;/b&gt; Bahía de Bizkaia Gas&lt;br/&gt;
+&lt;b&gt;Almacenamiento:&lt;/b&gt; 450.000 m³&lt;br/&gt;
+&lt;b&gt;Regasificación:&lt;/b&gt; 223 GWh/día&lt;br/&gt;
+&lt;b&gt;Tanques:&lt;/b&gt; 3&lt;br/&gt;
+&lt;b&gt;Atraques:&lt;/b&gt; 1&lt;br/&gt;
+&lt;b&gt;Teléfono:&lt;/b&gt; +34 913 709 000&lt;br/&gt;
+&lt;b&gt;Web:&lt;/b&gt; &lt;a href='https://www.enagas.es'&gt;https://www.enagas.es&lt;/a&gt;
+]]&gt;</description>
+        <Point>
+          <coordinates>-3.067,43.3577,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#lng</styleUrl>
+        <name>Sagunto</name>
+        <description>&lt;![CDATA[
+&lt;h2&gt;🏭 Sagunto&lt;/h2&gt;
+&lt;b&gt;Operador:&lt;/b&gt; Saggas&lt;br/&gt;
+&lt;b&gt;Almacenamiento:&lt;/b&gt; 600.000 m³&lt;br/&gt;
+&lt;b&gt;Regasificación:&lt;/b&gt; 279 GWh/día&lt;br/&gt;
+&lt;b&gt;Tanques:&lt;/b&gt; 4&lt;br/&gt;
+&lt;b&gt;Atraques:&lt;/b&gt; 1&lt;br/&gt;
+&lt;b&gt;Teléfono:&lt;/b&gt; +34 913 709 000&lt;br/&gt;
+&lt;b&gt;Web:&lt;/b&gt; &lt;a href='https://www.enagas.es'&gt;https://www.enagas.es&lt;/a&gt;
+]]&gt;</description>
+        <Point>
+          <coordinates>-0.2168,39.6442,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#lng</styleUrl>
+        <name>Mugardos</name>
+        <description>&lt;![CDATA[
+&lt;h2&gt;🏭 Mugardos&lt;/h2&gt;
+&lt;b&gt;Operador:&lt;/b&gt; Reganosa&lt;br/&gt;
+&lt;b&gt;Almacenamiento:&lt;/b&gt; 300.000 m³&lt;br/&gt;
+&lt;b&gt;Regasificación:&lt;/b&gt; 115 GWh/día&lt;br/&gt;
+&lt;b&gt;Tanques:&lt;/b&gt; 2&lt;br/&gt;
+&lt;b&gt;Atraques:&lt;/b&gt; 1&lt;br/&gt;
+&lt;b&gt;Teléfono:&lt;/b&gt; +34 913 709 000&lt;br/&gt;
+&lt;b&gt;Web:&lt;/b&gt; &lt;a href='https://www.enagas.es'&gt;https://www.enagas.es&lt;/a&gt;
+]]&gt;</description>
+        <Point>
+          <coordinates>-8.2626,43.4598,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <styleUrl>#lng</styleUrl>
+        <name>El Musel</name>
+        <description>&lt;![CDATA[
+&lt;h2&gt;🏭 El Musel&lt;/h2&gt;
+&lt;b&gt;Operador:&lt;/b&gt; Musel E-Hub&lt;br/&gt;
+&lt;b&gt;Almacenamiento:&lt;/b&gt; 130.000 m³&lt;br/&gt;
+&lt;b&gt;Regasificación:&lt;/b&gt; Logística&lt;br/&gt;
+&lt;b&gt;Tanques:&lt;/b&gt; 2&lt;br/&gt;
+&lt;b&gt;Atraques:&lt;/b&gt; 1&lt;br/&gt;
+&lt;b&gt;Teléfono:&lt;/b&gt; +34 913 709 000&lt;br/&gt;
+&lt;b&gt;Web:&lt;/b&gt; &lt;a href='https://www.enagas.es'&gt;https://www.enagas.es&lt;/a&gt;
+]]&gt;</description>
+        <Point>
+          <coordinates>-5.6955,43.5735,0</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
   </Document>
 </kml>
