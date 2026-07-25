@@ -105,5 +105,33 @@ try:
     ET.indent(tree, space="  ")
 except AttributeError:
     pass
+# =====================================================
+# DIBUJAR RED DE GASODUCTOS
+# =====================================================
 
+carpeta_gas = ET.SubElement(doc, "Folder")
+ET.SubElement(carpeta_gas, "name").text = "Gasoductos"
+
+for tramo in gasoductos:
+
+    coords = tramo.get("coordenadas", [])
+
+    if len(coords) < 2:
+        continue
+
+    pm = ET.SubElement(carpeta_gas, "Placemark")
+    ET.SubElement(pm, "name").text = tramo.get("nombre", "Gasoducto")
+
+    estilo = ET.SubElement(pm, "Style")
+    linea = ET.SubElement(estilo, "LineStyle")
+    ET.SubElement(linea, "color").text = "ffff0000"
+    ET.SubElement(linea, "width").text = "2"
+
+    ls = ET.SubElement(pm, "LineString")
+    ET.SubElement(ls, "tessellate").text = "1"
+
+    ET.SubElement(ls, "coordinates").text = " ".join(
+        f"{lon},{lat},0"
+        for lon, lat in coords
+    )
 tree.write("incendios_actual.kml", encoding="utf-8", xml_declaration=True)
