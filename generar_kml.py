@@ -45,6 +45,7 @@ with open("fires.csv", encoding="utf-8") as f:
     for row in csv.DictReader(f):
         lat = row.get("latitude")
         lon = row.get("longitude")
+
         if not lat or not lon:
             continue
 
@@ -118,13 +119,14 @@ for tramo in gasoductos:
 
     estilo = ET.SubElement(pm, "Style")
     linea = ET.SubElement(estilo, "LineStyle")
-    ET.SubElement(linea, "color").text = "ffff0000"
-    ET.SubElement(linea, "width").text = "2"
+    ET.SubElement(linea, "color").text = "ff0000ff"
+    ET.SubElement(linea, "width").text = "4"
     ls = ET.SubElement(pm, "LineString")
     ET.SubElement(ls, "tessellate").text = "1"
+    ET.SubElement(ls, "altitudeMode").text = "clampToGround"
 
-    ET.SubElement(ls, "coordinates").text = " ".join(
-        f"{lon},{lat},0"
+    ET.SubElement(ls, "coordinates").text = "\n".join(
+        f"{lon},{lat}"
         for lon, lat in coords
     )
 
