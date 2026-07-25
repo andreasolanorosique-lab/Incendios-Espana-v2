@@ -10,7 +10,7 @@ MAP_KEY = os.environ["FIRMS_MAP_KEY"]
 SOURCE = "VIIRS_SNPP_NRT"
 BBOX = "-10,35,5,44"
 
-DISTANCIA_AGRUPACION = 300
+DISTANCIA_AGRUPACION = 300  # metros
 
 URL = (
     f"https://firms.modaps.eosdis.nasa.gov/api/area/csv/"
@@ -38,12 +38,15 @@ styles = {
 
 for sid, (icon, scale) in styles.items():
     st = ET.SubElement(doc, "Style", id=sid)
+
     iconstyle = ET.SubElement(st, "IconStyle")
     ET.SubElement(iconstyle, "scale").text = str(scale)
-    ic = ET.SubElement(iconstyle, "Icon")
-    ET.SubElement(ic, "href").text = BASE + icon
-    lbl = ET.SubElement(st, "LabelStyle")
-    ET.SubElement(lbl, "scale").text = "0"
+
+    icono = ET.SubElement(iconstyle, "Icon")
+    ET.SubElement(icono, "href").text = BASE + icon
+
+    label = ET.SubElement(st, "LabelStyle")
+    ET.SubElement(label, "scale").text = "0"
 
 
 # =====================================================
@@ -63,8 +66,8 @@ def distancia_metros(lat1, lon1, lat2, lon2):
     dlon = lon2 - lon1
 
     a = (
-        sin(dlat / 2) ** 2 +
-        cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
+        sin(dlat / 2) ** 2
+        + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
     )
 
     c = 2 * atan2(sqrt(a), sqrt(1 - a))
@@ -97,9 +100,8 @@ def agrupar_focos(focos):
 
         if not añadido:
             grupos.append([foco])
-            return grupos
 
-
+    return grupos
 # =====================================================
 # LEER TODOS LOS FOCOS NASA
 # =====================================================
@@ -137,7 +139,8 @@ grupos = agrupar_focos(focos)
 
 
 # =====================================================
-# CREAR PLACEMARKS (POR AHORA UNO POR FOCO)
+# CREAR PLACEMARKS
+# (EN ESTA FASE SIGUE SIENDO UNO POR FOCO)
 # =====================================================
 
 for grupo in grupos:
