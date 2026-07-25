@@ -4,9 +4,13 @@ import json
 import requests
 import xml.etree.ElementTree as ET
 
+from math import radians, sin, cos, sqrt, atan2
+
 MAP_KEY = os.environ["FIRMS_MAP_KEY"]
 SOURCE = "VIIRS_SNPP_NRT"
 BBOX = "-10,35,5,44"
+
+DISTANCIA_AGRUPACION = 300
 
 URL = (
     f"https://firms.modaps.eosdis.nasa.gov/api/area/csv/"
@@ -41,8 +45,71 @@ for sid, (icon, scale) in styles.items():
     lbl = ET.SubElement(st, "LabelStyle")
     ET.SubElement(lbl, "scale").text = "0"
 
+
+# =====================================================
+# FUNCIONES DE AGRUPACIÓN
+# =====================================================
+
+def distancia_metros(lat1, lon1, lat2, lon2):
+
+    R = 6371000
+
+    lat1 = radians(lat1)
+    lon1 = radians(lon1)
+    lat2 = radians(lat2)
+    lon2 = radians(lon2)
+
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+
+    a = (
+        sin(dlat / 2) ** 2 +
+        cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
+    )
+
+    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+
+    return R * c
+
+
+def agrupar_focos(focos):
+
+    grupos = []
+
+    for foco in focos:
+
+        añadido = False
+
+        for grupo in grupos:
+
+            referencia = grupo[0]
+
+            if distancia_metros(
+                foco["lat"],
+                foco["lon"],
+                referencia["lat"],
+                referencia["lon"]
+            ) <= DISTANCIA_AGRUPACION:
+
+                grupo.append(foco)
+                añadido = True
+                break
+
+        if not añadido:
+            grupos.append([foco])
+            return grupos
+
+
+# =====================================================
+# LEER TODOS LOS FOCOS NASA
+# =====================================================
+
+focos = []
+
 with open("fires.csv", encoding="utf-8") as f:
+
     for row in csv.DictReader(f):
+
         lat = row.get("latitude")
         lon = row.get("longitude")
 
@@ -53,6 +120,35 @@ with open("fires.csv", encoding="utf-8") as f:
             frp = float(row.get("frp") or 0)
         except:
             frp = 0
+
+        focos.append({
+            "lat": float(lat),
+            "lon": float(lon),
+            "frp": frp,
+            "row": row
+        })
+
+
+# =====================================================
+# AGRUPAR FOCOS
+# =====================================================
+
+grupos = agrupar_focos(focos)
+
+
+# =====================================================
+# CREAR PLACEMARKS (POR AHORA UNO POR FOCO)
+# =====================================================
+
+for grupo in grupos:
+
+    for foco in grupo:
+
+        row = foco["row"]
+
+        lat = foco["lat"]
+        lon = foco["lon"]
+        frp = foco["frp"]
 
         if frp < 10:
             style = "#green"
@@ -70,6 +166,7 @@ with open("fires.csv", encoding="utf-8") as f:
         pm = ET.SubElement(doc, "Placemark")
         ET.SubElement(pm, "styleUrl").text = style
         ET.SubElement(pm, "name").text = ""
+
         desc = f"""
         <![CDATA[
         <h2>🔥 Incendio activo</h2>
@@ -85,11 +182,11 @@ with open("fires.csv", encoding="utf-8") as f:
         </table>
         ]]>
         """
+
         ET.SubElement(pm, "description").text = desc
 
         pt = ET.SubElement(pm, "Point")
         ET.SubElement(pt, "coordinates").text = f"{lon},{lat},0"
-
 # =====================================================
 # CARGAR RED DE GASODUCTOS
 # =====================================================
@@ -119,9 +216,12 @@ for tramo in gasoductos:
 
     estilo = ET.SubElement(pm, "Style")
     linea = ET.SubElement(estilo, "LineStyle")
+
     ET.SubElement(linea, "color").text = "ff0000ff"
     ET.SubElement(linea, "width").text = "4"
+
     ls = ET.SubElement(pm, "LineString")
+
     ET.SubElement(ls, "tessellate").text = "1"
     ET.SubElement(ls, "altitudeMode").text = "clampToGround"
 
@@ -136,7 +236,6 @@ try:
     ET.indent(tree, space="  ")
 except AttributeError:
     pass
-
 tree.write(
     "incendios_actual.kml",
     encoding="utf-8",
