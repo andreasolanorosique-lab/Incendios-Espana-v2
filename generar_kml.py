@@ -69,7 +69,6 @@ with open("fires.csv", encoding="utf-8") as f:
         pm = ET.SubElement(doc, "Placemark")
         ET.SubElement(pm, "styleUrl").text = style
         ET.SubElement(pm, "name").text = ""
-
         desc = f"""
         <![CDATA[
         <h2>🔥 Incendio activo</h2>
@@ -91,7 +90,7 @@ with open("fires.csv", encoding="utf-8") as f:
         ET.SubElement(pt, "coordinates").text = f"{lon},{lat},0"
 
 # =====================================================
-# CARGAR RED DE GASODUCTOS (todavía no se dibujan)
+# CARGAR RED DE GASODUCTOS
 # =====================================================
 
 with open(
@@ -100,11 +99,6 @@ with open(
 ) as f:
     gasoductos = json.load(f)
 
-tree = ET.ElementTree(kml)
-try:
-    ET.indent(tree, space="  ")
-except AttributeError:
-    pass
 # =====================================================
 # DIBUJAR RED DE GASODUCTOS
 # =====================================================
@@ -126,7 +120,6 @@ for tramo in gasoductos:
     linea = ET.SubElement(estilo, "LineStyle")
     ET.SubElement(linea, "color").text = "ffff0000"
     ET.SubElement(linea, "width").text = "2"
-
     ls = ET.SubElement(pm, "LineString")
     ET.SubElement(ls, "tessellate").text = "1"
 
@@ -134,4 +127,16 @@ for tramo in gasoductos:
         f"{lon},{lat},0"
         for lon, lat in coords
     )
-tree.write("incendios_actual.kml", encoding="utf-8", xml_declaration=True)
+
+tree = ET.ElementTree(kml)
+
+try:
+    ET.indent(tree, space="  ")
+except AttributeError:
+    pass
+
+tree.write(
+    "incendios_actual.kml",
+    encoding="utf-8",
+    xml_declaration=True
+)
