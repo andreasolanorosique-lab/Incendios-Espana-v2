@@ -1,4 +1,4 @@
-import os
+port os
 import csv
 import json
 import requests
@@ -137,6 +137,7 @@ with open("fires.csv", encoding="utf-8") as f:
 
 grupos = agrupar_focos(focos)
 
+grupos = [grupo for grupo in grupos if len(grupo) > 1]
 
 # =====================================================
 # CREAR PLACEMARKS
