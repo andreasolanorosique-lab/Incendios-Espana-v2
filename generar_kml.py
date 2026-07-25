@@ -1,6 +1,6 @@
-
 import os
 import csv
+import json
 import requests
 import xml.etree.ElementTree as ET
 
@@ -39,7 +39,7 @@ for sid, (icon, scale) in styles.items():
     ic = ET.SubElement(iconstyle, "Icon")
     ET.SubElement(ic, "href").text = BASE + icon
     lbl = ET.SubElement(st, "LabelStyle")
-    ET.SubElement(lbl, "scale").text = "0"   # Oculta el texto en el mapa
+    ET.SubElement(lbl, "scale").text = "0"
 
 with open("fires.csv", encoding="utf-8") as f:
     for row in csv.DictReader(f):
@@ -90,9 +90,20 @@ with open("fires.csv", encoding="utf-8") as f:
         pt = ET.SubElement(pm, "Point")
         ET.SubElement(pt, "coordinates").text = f"{lon},{lat},0"
 
+# =====================================================
+# CARGAR RED DE GASODUCTOS (todavía no se dibujan)
+# =====================================================
+
+with open(
+    "infraestructuras/gasoductos/gasoductos.json",
+    encoding="utf-8"
+) as f:
+    gasoductos = json.load(f)
+
 tree = ET.ElementTree(kml)
 try:
     ET.indent(tree, space="  ")
 except AttributeError:
     pass
+
 tree.write("incendios_actual.kml", encoding="utf-8", xml_declaration=True)
