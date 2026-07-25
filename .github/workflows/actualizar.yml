@@ -19,9 +19,13 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install -r requirements.txt
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
 
-      - name: Ejecutar script
+      - name: Extraer red de gas
+        run: python extraer_gasoductos.py
+
+      - name: Generar KML de incendios
         env:
           FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
         run: python generar_kml.py
@@ -31,9 +35,12 @@ jobs:
           git status
           git diff --stat
           ls -lh incendios_actual.kml
-          sha256sum incendios_actual.kml
+
+          if [ -f infraestructuras/gasoductos/gasoductos.json ]; then
+            ls -lh infraestructuras/gasoductos/gasoductos.json
+          fi
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Actualizar KML"
+          commit_message: "Actualizar KML y red de gas"
           add_options: "-A"
