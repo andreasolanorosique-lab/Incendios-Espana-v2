@@ -73,8 +73,6 @@ def distancia_metros(lat1, lon1, lat2, lon2):
     c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
     return R * c
-
-
 def agrupar_focos(focos):
 
     grupos = []
@@ -92,34 +90,19 @@ def agrupar_focos(focos):
                     foco["lon"],
                     referencia["lat"],
                     referencia["lon"]
-                 ) <= DISTANCIA_AGRUPACION:
+                ) <= DISTANCIA_AGRUPACION:
 
                     grupo.append(foco)
                     añadido = True
                     break
 
-if añadido:
-    break
-
-    if distancia_metros(
-        foco["lat"],
-        foco["lon"],
-        referencia["lat"],
-        referencia["lon"]
-    ) <= DISTANCIA_AGRUPACION:
-
-        grupo.append(foco)
-        añadido = True
-        break
-
-if añadido:
-    break
+            if añadido:
+                break
 
         if not añadido:
             grupos.append([foco])
 
-    return grupos
-# =====================================================
+    return grupos# =====================================================
 # LEER TODOS LOS FOCOS NASA
 # =====================================================
 
