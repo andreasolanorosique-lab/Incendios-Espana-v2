@@ -25,6 +25,9 @@ jobs:
       - name: Extraer red de gas
         run: python extraer_gasoductos.py
 
+      - name: Extraer posiciones
+        run: python extraer_posiciones.py
+
       - name: Generar KML de incendios
         env:
           FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
@@ -34,13 +37,24 @@ jobs:
         run: |
           git status
           git diff --stat
+
+          echo ""
+          echo "=== KML ==="
           ls -lh incendios_actual.kml
 
+          echo ""
+          echo "=== Gasoductos ==="
           if [ -f infraestructuras/gasoductos/gasoductos.json ]; then
             ls -lh infraestructuras/gasoductos/gasoductos.json
           fi
 
+          echo ""
+          echo "=== Posiciones ==="
+          if [ -f infraestructuras/posiciones/catalogo_posiciones.json ]; then
+            ls -lh infraestructuras/posiciones/catalogo_posiciones.json
+          fi
+
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Actualizar KML y red de gas"
+          commit_message: "Actualizar KML, gasoductos y posiciones"
           add_options: "-A"
