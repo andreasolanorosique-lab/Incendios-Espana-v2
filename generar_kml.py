@@ -4,8 +4,7 @@ import json
 import requests
 import xml.etree.ElementTree as ET
 
-from math import radians, sin, cos, sqrt, atan2
-
+from math import radians, sin, cos, sqrt, atan2, degrees, asin
 MAP_KEY = os.environ["FIRMS_MAP_KEY"]
 SOURCE = "VIIRS_SNPP_NRT"
 BBOX = "-10,35,5,44"
@@ -73,6 +72,32 @@ def distancia_metros(lat1, lon1, lat2, lon2):
     c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
     return R * c
+def crear_circulo(lat, lon, radio_m, pasos=36):
+
+    R = 6371000
+
+    puntos = []
+
+    lat1 = radians(lat)
+    lon1 = radians(lon)
+
+    for i in range(pasos + 1):
+
+        ang = radians(i * 360 / pasos)
+
+        lat2 = asin(
+            sin(lat1) * cos(radio_m / R)
+            + cos(lat1) * sin(radio_m / R) * cos(ang)
+        )
+
+        lon2 = lon1 + atan2(
+            sin(ang) * sin(radio_m / R) * cos(lat1),
+            cos(radio_m / R) - sin(lat1) * sin(lat2)
+        )
+
+        puntos.append((degrees(lon2), degrees(lat2)))
+
+    return puntos
 def agrupar_focos(focos):
 
     grupos = []
