@@ -102,7 +102,9 @@ def agrupar_focos(focos):
         if not añadido:
             grupos.append([foco])
 
-    return grupos# =====================================================
+    return grupos
+
+# =====================================================
 # LEER TODOS LOS FOCOS NASA
 # =====================================================
 
@@ -157,42 +159,42 @@ for grupo in grupos:
     frp = foco_principal["frp"]
 
     if frp < 10:
-            style = "#green"
-            confianza = "Baja"
+        style = "#green"
+        confianza = "Baja"
     elif frp < 30:
-            style = "#yellow"
-            confianza = "Media"
+        style = "#yellow"
+        confianza = "Media"
     elif frp < 80:
-            style = "#orange"
-            confianza = "Alta"
+        style = "#orange"
+        confianza = "Alta"
     else:
-            style = "#red"
-            confianza = "Muy alta"
+        style = "#red"
+        confianza = "Muy alta"
 
-        pm = ET.SubElement(doc, "Placemark")
-        ET.SubElement(pm, "styleUrl").text = style
-        ET.SubElement(pm, "name").text = ""
+    pm = ET.SubElement(doc, "Placemark")
+    ET.SubElement(pm, "styleUrl").text = style
+    ET.SubElement(pm, "name").text = ""
 
-        desc = f"""
-        <![CDATA[
-        <h2>🔥 Incendio activo</h2>
-        <table border="0" cellpadding="4">
-        <tr><td><b>FRP</b></td><td>{frp:.1f} MW</td></tr>
-        <tr><td><b>Confianza</b></td><td>{confianza}</td></tr>
-        <tr><td><b>Fecha</b></td><td>{row.get('acq_date','')}</td></tr>
-        <tr><td><b>Hora</b></td><td>{row.get('acq_time','')} UTC</td></tr>
-        <tr><td><b>Satélite</b></td><td>{row.get('satellite','')}</td></tr>
-        <tr><td><b>Instrumento</b></td><td>{row.get('instrument','')}</td></tr>
-        <tr><td><b>Latitud</b></td><td>{lat}</td></tr>
-        <tr><td><b>Longitud</b></td><td>{lon}</td></tr>
-        </table>
-        ]]>
-        """
+    desc = f"""
+    <![CDATA[
+    <h2>🔥 Incendio activo</h2>
+    <table border="0" cellpadding="4">
+    <tr><td><b>FRP</b></td><td>{frp:.1f} MW</td></tr>
+    <tr><td><b>Confianza</b></td><td>{confianza}</td></tr>
+    <tr><td><b>Fecha</b></td><td>{row.get('acq_date','')}</td></tr>
+    <tr><td><b>Hora</b></td><td>{row.get('acq_time','')} UTC</td></tr>
+    <tr><td><b>Satélite</b></td><td>{row.get('satellite','')}</td></tr>
+    <tr><td><b>Instrumento</b></td><td>{row.get('instrument','')}</td></tr>
+    <tr><td><b>Latitud</b></td><td>{lat}</td></tr>
+    <tr><td><b>Longitud</b></td><td>{lon}</td></tr>
+    </table>
+    ]]>
+    """
 
-        ET.SubElement(pm, "description").text = desc
+    ET.SubElement(pm, "description").text = desc
 
-        pt = ET.SubElement(pm, "Point")
-        ET.SubElement(pt, "coordinates").text = f"{lon},{lat},0"
+    pt = ET.SubElement(pm, "Point")
+    ET.SubElement(pt, "coordinates").text = f"{lon},{lat},0"
 # =====================================================
 # CARGAR RED DE GASODUCTOS
 # =====================================================
