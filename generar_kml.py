@@ -87,6 +87,20 @@ def agrupar_focos(focos):
 
             for referencia in grupo:
 
+                if distancia_metros(
+                    foco["lat"],
+                    foco["lon"],
+                    referencia["lat"],
+                    referencia["lon"]
+                 ) <= DISTANCIA_AGRUPACION:
+
+                    grupo.append(foco)
+                    añadido = True
+                    break
+
+if añadido:
+    break
+
     if distancia_metros(
         foco["lat"],
         foco["lon"],
