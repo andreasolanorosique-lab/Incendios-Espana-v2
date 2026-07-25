@@ -1,151 +1,320 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-import os
 import csv
+import json
+import os
 import requests
-import xml.etree.ElementTree as ET
+from xml.sax.saxutils import escape
 
-MAP_KEY = os.environ["FIRMS_MAP_KEY"]
-SOURCE = "VIIRS_SNPP_NRT"
-BBOX = "-10,35,5,44"
+# ------------------------------------------------------------
+# CONFIGURACIÓN
+# ------------------------------------------------------------
 
-URL = (
+FIRMS_MAP_KEY = os.environ.get("FIRMS_MAP_KEY")
+
+URL_FIRMS = (
     f"https://firms.modaps.eosdis.nasa.gov/api/area/csv/"
-    f"{MAP_KEY}/{SOURCE}/{BBOX}/1"
+    f"{FIRMS_MAP_KEY}/VIIRS_SNPP_NRT/world/1"
 )
 
-r = requests.get(URL, timeout=120)
-r.raise_for_status()
+ARCHIVO_GASODUCTOS = "infraestructuras/gasoductos/gasoductos.json"
+ARCHIVO_POSICIONES = "infraestructuras/posiciones/catalogo_posiciones.json"
 
-print("="*60)
-print("URL:", URL)
-print("CSV descargado:", len(r.content), "bytes")
-print("Primeros 500 caracteres del CSV:")
-print(r.text[:500])
-print("="*60)
-
-with open("fires.csv", "wb") as f:
-    f.write(r.content)
-
-kml = ET.Element("kml", xmlns="http://www.opengis.net/kml/2.2")
-doc = ET.SubElement(kml, "Document")
-ET.SubElement(doc, "name").text = "Incendios activos España"
-
-BASE = "https://andreasolanorosique-lab.github.io/Incendios-Espana-v2/icons/"
+SALIDA_KML = "incendios_actual.kml"
 
 
-PLANTAS_REGASIFICACION = [
-    {"nombre":"Barcelona","lat":41.3447,"lon":2.1568,"operador":"Enagás","almacenamiento":"760.000 m³","regasificacion":"544 GWh/día","tanques":6,"atraques":2,"telefono":"+34 913 709 000","web":"https://www.enagas.es"},
-    {"nombre":"Huelva","lat":37.1847,"lon":-6.9448,"operador":"Enagás","almacenamiento":"619.500 m³","regasificacion":"377 GWh/día","tanques":5,"atraques":1,"telefono":"+34 913 709 000","web":"https://www.enagas.es"},
-    {"nombre":"Cartagena","lat":37.5756,"lon":-0.9675,"operador":"Enagás","almacenamiento":"587.000 m³","regasificacion":"377 GWh/día","tanques":5,"atraques":2,"telefono":"+34 913 709 000","web":"https://www.enagas.es"},
-    {"nombre":"Bilbao","lat":43.3577,"lon":-3.0670,"operador":"Bahía de Bizkaia Gas","almacenamiento":"450.000 m³","regasificacion":"223 GWh/día","tanques":3,"atraques":1,"telefono":"+34 913 709 000","web":"https://www.enagas.es"},
-    {"nombre":"Sagunto","lat":39.6442,"lon":-0.2168,"operador":"Saggas","almacenamiento":"600.000 m³","regasificacion":"279 GWh/día","tanques":4,"atraques":1,"telefono":"+34 913 709 000","web":"https://www.enagas.es"},
-    {"nombre":"Mugardos","lat":43.4598,"lon":-8.2626,"operador":"Reganosa","almacenamiento":"300.000 m³","regasificacion":"115 GWh/día","tanques":2,"atraques":1,"telefono":"+34 913 709 000","web":"https://www.enagas.es"},
-    {"nombre":"El Musel","lat":43.5735,"lon":-5.6955,"operador":"Musel E-Hub","almacenamiento":"130.000 m³","regasificacion":"Logística","tanques":2,"atraques":1,"telefono":"+34 913 709 000","web":"https://www.enagas.es"},
-]
+# ------------------------------------------------------------
+# DESCARGAR NASA FIRMS
+# ------------------------------------------------------------
 
-styles = {
-    "green": ("fire_green.png", 1.0),
-    "yellow": ("fire_yellow.png", 1.0),
-    "orange": ("fire_orange.png", 1.0),
-    "red": ("fire_red.png", 1.0),
-}
+def descargar_firms():
 
-styles["lng"]=("https://maps.google.com/mapfiles/kml/shapes/harbor.png",1.1)
+    print("Descargando incendios NASA FIRMS...")
 
-for sid, (icon, scale) in styles.items():
-    st = ET.SubElement(doc, "Style", id=sid)
-    iconstyle = ET.SubElement(st, "IconStyle")
-    ET.SubElement(iconstyle, "scale").text = str(scale)
-    ic = ET.SubElement(iconstyle, "Icon")
-    ET.SubElement(ic, "href").text = icon if icon.startswith("http") else BASE + icon
-    lbl = ET.SubElement(st, "LabelStyle")
-    ET.SubElement(lbl, "scale").text = "0"   # Oculta el texto en el mapa
+    respuesta = requests.get(URL_FIRMS, timeout=60)
 
-with open("fires.csv", encoding="utf-8") as f:
-    for row in csv.DictReader(f):
-        lat = row.get("latitude")
-        lon = row.get("longitude")
-        if not lat or not lon:
-            continue
+    respuesta.raise_for_status()
+
+    lector = csv.DictReader(respuesta.text.splitlines())
+
+    incendios = []
+
+    for fila in lector:
 
         try:
-            frp = float(row.get("frp") or 0)
-        except:
-            frp = 0
 
-        if frp < 10:
-            style = "#green"
-            confianza = "Baja"
-        elif frp < 30:
-            style = "#yellow"
-            confianza = "Media"
-        elif frp < 80:
-            style = "#orange"
-            confianza = "Alta"
-        else:
-            style = "#red"
-            confianza = "Muy alta"
+            incendios.append({
+                "lat": float(fila["latitude"]),
+                "lon": float(fila["longitude"]),
+                "frp": float(fila.get("frp", 0)),
+                "confidence": fila.get("confidence", ""),
+                "fecha": fila.get("acq_date", ""),
+                "hora": fila.get("acq_time", "")
+            })
 
-        pm = ET.SubElement(doc, "Placemark")
-        ET.SubElement(pm, "styleUrl").text = style
-        ET.SubElement(pm, "name").text = ""
+        except Exception:
+            continue
 
-        desc = f"""
-        <![CDATA[
-        <h2>🔥 Incendio activo</h2>
-        <table border="0" cellpadding="4">
-        <tr><td><b>FRP</b></td><td>{frp:.1f} MW</td></tr>
-        <tr><td><b>Confianza</b></td><td>{confianza}</td></tr>
-        <tr><td><b>Fecha</b></td><td>{row.get('acq_date','')}</td></tr>
-        <tr><td><b>Hora</b></td><td>{row.get('acq_time','')} UTC</td></tr>
-        <tr><td><b>Satélite</b></td><td>{row.get('satellite','')}</td></tr>
-        <tr><td><b>Instrumento</b></td><td>{row.get('instrument','')}</td></tr>
-        <tr><td><b>Latitud</b></td><td>{lat}</td></tr>
-        <tr><td><b>Longitud</b></td><td>{lon}</td></tr>
-        </table>
-        ]]>
-        """
-        ET.SubElement(pm, "description").text = desc
+    print(f"Incendios descargados: {len(incendios)}")
 
-        pt = ET.SubElement(pm, "Point")
-        ET.SubElement(pt, "coordinates").text = f"{lon},{lat},0"
+    return incendios
 
 
-folder = ET.SubElement(doc,"Folder")
-ET.SubElement(folder,"name").text="🏭 Plantas de regasificación"
-for pl in PLANTAS_REGASIFICACION:
-    pm=ET.SubElement(folder,"Placemark")
-    ET.SubElement(pm,"styleUrl").text="#lng"
-    ET.SubElement(pm,"name").text=pl["nombre"]
-    ET.SubElement(pm,"description").text=f"""<![CDATA[
-<h2>🏭 {pl['nombre']}</h2>
-<b>Operador:</b> {pl['operador']}<br/>
-<b>Almacenamiento:</b> {pl['almacenamiento']}<br/>
-<b>Regasificación:</b> {pl['regasificacion']}<br/>
-<b>Tanques:</b> {pl['tanques']}<br/>
-<b>Atraques:</b> {pl['atraques']}<br/>
-<b>Teléfono:</b> {pl['telefono']}<br/>
-<b>Web:</b> <a href='{pl['web']}'>{pl['web']}</a>
-]]>"""
-    pt=ET.SubElement(pm,"Point")
-    ET.SubElement(pt,"coordinates").text=f"{pl['lon']},{pl['lat']},0"
+# ------------------------------------------------------------
+# LEER GASODUCTOS
+# ------------------------------------------------------------
+
+def cargar_gasoductos():
+
+    print("Leyendo gasoductos...")
+
+    if not os.path.exists(ARCHIVO_GASODUCTOS):
+
+        print("No existe gasoductos.json")
+
+        return []
+
+    with open(ARCHIVO_GASODUCTOS, encoding="utf-8") as f:
+
+        datos = json.load(f)
+
+    print(f"Gasoductos cargados: {len(datos)}")
+
+    return datos
 
 
-tree = ET.ElementTree(kml)
-try:
-    ET.indent(tree, space="  ")
-except AttributeError:
-    pass
-tree.write("incendios_actual.kml", encoding="utf-8", xml_declaration=True)
+# ------------------------------------------------------------
+# LEER POSICIONES
+# ------------------------------------------------------------
 
-import os
-print("="*60)
-print("KML generado correctamente")
-print("Tamaño KML:", os.path.getsize("incendios_actual.kml"), "bytes")
-with open("fires.csv", encoding="utf-8") as _f:
-    total = max(sum(1 for _ in _f)-1,0)
-print("Incendios leídos:", total)
-with open("incendios_actual.kml", encoding="utf-8") as _k:
-    print("Primeros 300 caracteres del KML:")
-    print(_k.read(300))
-print("="*60)
+def cargar_posiciones():
+
+    print("Leyendo posiciones...")
+
+    if not os.path.exists(ARCHIVO_POSICIONES):
+
+        print("No existe catalogo_posiciones.json")
+
+        return []
+
+    with open(ARCHIVO_POSICIONES, encoding="utf-8") as f:
+
+        datos = json.load(f)
+
+    print(f"Posiciones cargadas: {len(datos)}")
+
+    return datos
+
+
+# ------------------------------------------------------------
+# INICIO DEL KML
+# ------------------------------------------------------------
+
+def inicio_kml():
+
+    return """<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+
+<name>Incendios España</name>
+
+<Style id="incendio">
+
+<IconStyle>
+
+<scale>0.8</scale>
+
+<Icon>
+
+<href>http://maps.google.com/mapfiles/kml/shapes/firedept.png</href>
+
+</Icon>
+
+</IconStyle>
+
+</Style>
+
+<Style id="gasoducto">
+
+<LineStyle>
+
+<color>ff0000ff</color>
+
+<width>2</width>
+
+</LineStyle>
+
+</Style>
+
+"""
+# ------------------------------------------------------------
+# FIN DEL KML
+# ------------------------------------------------------------
+
+def fin_kml():
+    return """
+</Document>
+</kml>
+"""
+
+
+# ------------------------------------------------------------
+# DIBUJAR GASODUCTOS
+# ------------------------------------------------------------
+
+def escribir_gasoductos(f, gasoductos):
+
+    print("Escribiendo gasoductos...")
+
+    for gasoducto in gasoductos:
+
+        nombre = escape(str(gasoducto.get("nombre", "Gasoducto")))
+        coordenadas = gasoducto.get("coordenadas", [])
+
+        if len(coordenadas) < 2:
+            continue
+
+        f.write(f"""
+<Placemark>
+    <name>{nombre}</name>
+    <styleUrl>#gasoducto</styleUrl>
+    <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>
+""")
+
+        for punto in coordenadas:
+
+            try:
+                lon = punto["longitud"]
+                lat = punto["latitud"]
+            except KeyError:
+                continue
+
+            f.write(f"{lon},{lat},0 ")
+
+        f.write("""
+        </coordinates>
+    </LineString>
+</Placemark>
+""")
+
+
+# ------------------------------------------------------------
+# DIBUJAR INCENDIOS
+# ------------------------------------------------------------
+
+def escribir_incendios(f, incendios):
+
+    print("Escribiendo incendios...")
+
+    for incendio in incendios:
+
+        lat = incendio["lat"]
+        lon = incendio["lon"]
+        frp = incendio["frp"]
+        fecha = incendio["fecha"]
+        hora = incendio["hora"]
+
+        descripcion = f"""
+<![CDATA[
+<b>FRP:</b> {frp}<br>
+<b>Fecha:</b> {fecha}<br>
+<b>Hora:</b> {hora}
+]]>
+"""
+
+        f.write(f"""
+<Placemark>
+
+<name>Incendio</name>
+
+<styleUrl>#incendio</styleUrl>
+
+<description>{descripcion}</description>
+
+<Point>
+
+<coordinates>{lon},{lat},0</coordinates>
+
+</Point>
+
+</Placemark>
+""")
+# ------------------------------------------------------------
+# GENERAR KML
+# ------------------------------------------------------------
+
+def generar_kml(incendios, gasoductos, posiciones):
+
+    print("Generando KML...")
+
+    with open(SALIDA_KML, "w", encoding="utf-8") as f:
+
+        f.write(inicio_kml())
+
+        # ----------------------------------------------------
+        # GASODUCTOS
+        # ----------------------------------------------------
+
+        escribir_gasoductos(f, gasoductos)
+
+        # ----------------------------------------------------
+        # INCENDIOS
+        # ----------------------------------------------------
+
+        escribir_incendios(f, incendios)
+
+        # ----------------------------------------------------
+        # AQUÍ AÑADIREMOS MÁS ADELANTE:
+        #
+        # - Posiciones
+        # - Gasoducto más cercano
+        # - Posición más cercana
+        #
+        # ----------------------------------------------------
+
+        f.write(fin_kml())
+
+    print(f"KML generado correctamente: {SALIDA_KML}")
+# ------------------------------------------------------------
+# PROGRAMA PRINCIPAL
+# ------------------------------------------------------------
+
+def main():
+
+    try:
+
+        incendios = descargar_firms()
+        gasoductos = cargar_gasoductos()
+        posiciones = cargar_posiciones()
+
+        print()
+        print("Resumen")
+        print("------------------------------")
+        print(f"Incendios : {len(incendios)}")
+        print(f"Gasoductos: {len(gasoductos)}")
+        print(f"Posiciones: {len(posiciones)}")
+        print()
+
+        generar_kml(
+            incendios,
+            gasoductos,
+            posiciones
+        )
+
+        print()
+        print("Proceso terminado correctamente.")
+
+    except Exception as e:
+
+        print()
+        print("ERROR")
+        print("--------------------------------")
+        print(e)
+        raise
+
+
+if __name__ == "__main__":
+    main()
