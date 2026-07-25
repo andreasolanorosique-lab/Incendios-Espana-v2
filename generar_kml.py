@@ -220,6 +220,31 @@ for grupo in grupos:
 
     pt = ET.SubElement(pm, "Point")
     ET.SubElement(pt, "coordinates").text = f"{lon},{lat},0"
+        # ===== CÍRCULO DE PRUEBA =====
+
+    if grupo == grupos[0]:
+
+        circulo = crear_circulo(lat, lon, 1000)
+
+        pol = ET.SubElement(doc, "Placemark")
+
+        estilo = ET.SubElement(pol, "Style")
+
+        linea = ET.SubElement(estilo, "LineStyle")
+        ET.SubElement(linea, "color").text = "ff0000ff"
+        ET.SubElement(linea, "width").text = "2"
+
+        relleno = ET.SubElement(estilo, "PolyStyle")
+        ET.SubElement(relleno, "color").text = "300000ff"
+
+        polygon = ET.SubElement(pol, "Polygon")
+
+        outer = ET.SubElement(polygon, "outerBoundaryIs")
+        ring = ET.SubElement(outer, "LinearRing")
+
+        ET.SubElement(ring, "coordinates").text = "\n".join(
+            f"{lon},{lat},0" for lon, lat in circulo
+        )
 # =====================================================
 # CARGAR RED DE GASODUCTOS
 # =====================================================
