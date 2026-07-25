@@ -158,18 +158,18 @@ for grupo in grupos:
     row = foco_principal["row"]
     frp = foco_principal["frp"]
 
-    if frp < 10:
-        style = "#green"
-        confianza = "Baja"
-    elif frp < 30:
-        style = "#yellow"
-        confianza = "Media"
-    elif frp < 80:
-        style = "#orange"
-        confianza = "Alta"
-    else:
-        style = "#red"
-        confianza = "Muy alta"
+if frp < 20:
+    style = "#green"
+    confianza = "Muy baja"
+elif frp < 50:
+    style = "#yellow"
+    confianza = "Baja"
+elif frp < 100:
+    style = "#orange"
+    confianza = "Media"
+else:
+    style = "#red"
+    confianza = "Alta"
 
     pm = ET.SubElement(doc, "Placemark")
     ET.SubElement(pm, "styleUrl").text = style
