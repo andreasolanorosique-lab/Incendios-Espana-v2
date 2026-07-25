@@ -146,13 +146,15 @@ grupos = [grupo for grupo in grupos if len(grupo) > 1]
 
 for grupo in grupos:
 
-    for foco in grupo:
+    cantidad = len(grupo)
 
-        row = foco["row"]
+    lat = sum(f["lat"] for f in grupo) / cantidad
+    lon = sum(f["lon"] for f in grupo) / cantidad
 
-        lat = foco["lat"]
-        lon = foco["lon"]
-        frp = foco["frp"]
+    foco_principal = max(grupo, key=lambda f: f["frp"])
+
+    row = foco_principal["row"]
+    frp = foco_principal["frp"]
 
         if frp < 10:
             style = "#green"
