@@ -5,7 +5,7 @@
     <Link>
       <href>https://andreasolanorosique-lab.github.io/Incendios-Espana-v2/incendios_actual.kml</href>
       <refreshMode>onInterval</refreshMode>
-      <refreshInterval>28800</refreshInterval>
+      <refreshInterval>600</refreshInterval>
     </Link>
   </NetworkLink>
 </kml>
