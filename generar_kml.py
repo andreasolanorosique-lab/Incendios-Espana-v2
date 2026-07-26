@@ -472,7 +472,22 @@ resultado = buscar_effis(lat, lon)
 
 print(resultado)
 exit()
+# ===========================================
+# PRUEBA DE CONSULTA A EFFIS
+# ===========================================
 
+grupo = grupos[0]
+
+lat = sum(f["lat"] for f in grupo) / len(grupo)
+lon = sum(f["lon"] for f in grupo) / len(grupo)
+
+print(f"Consultando EFFIS para: {lat}, {lon}")
+
+resultado = buscar_effis(lat, lon)
+
+print(resultado)
+
+exit()
 # Elimina focos aislados muy débiles
 grupos = [
     grupo
