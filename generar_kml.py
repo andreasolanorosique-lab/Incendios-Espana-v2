@@ -183,14 +183,16 @@ for grupo in grupos:
     row = foco_principal["row"]
     frp = foco_principal["frp"]
 
-    if frp < 50:
+     if frp < 50:
         style = "#amarillo"
+        confianza = "Baja"
+
     elif frp < 100:
         style = "#naranja"
+        confianza = "Media"
+
     else:
         style = "#rojo"
-    else:
-        style = "#red"
         confianza = "Alta"
 
     pm = ET.SubElement(doc, "Placemark")
