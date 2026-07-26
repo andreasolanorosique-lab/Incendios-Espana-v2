@@ -57,6 +57,15 @@
         <scale>0</scale>
       </LabelStyle>
     </Style>
+    <Style id="area_amarilla">
+      <LineStyle>
+        <color>ff00ffff</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>5500ffff</color>
+      </PolyStyle>
+    </Style>
     <Placemark>
       <styleUrl>#pink</styleUrl>
       <name />
