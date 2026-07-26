@@ -514,7 +514,50 @@ for grupo in grupos:
     else:
         style = "#red"
         confianza = "Muy alta"
+    # =====================================================
+    # ÁREA ESTIMADA DEL INCENDIO
+    # =====================================================
 
+    placemark_area = ET.SubElement(
+        documento,
+        "Placemark",
+    )
+
+    ET.SubElement(
+        placemark_area,
+        "styleUrl",
+    ).text = "#area_amarilla"
+
+    polygon = ET.SubElement(
+        placemark_area,
+        "Polygon",
+    )
+
+    outer = ET.SubElement(
+        polygon,
+        "outerBoundaryIs",
+    )
+
+    ring = ET.SubElement(
+        outer,
+        "LinearRing",
+    )
+
+    coords = ET.SubElement(
+        ring,
+        "coordinates",
+    )
+
+    puntos = crear_circulo(
+        lat,
+        lon,
+        radio,
+    )
+
+    coords.text = " ".join(
+        f"{lon},{lat},0"
+        for lat, lon in puntos
+    )
 
     placemark = ET.SubElement(
         documento,
