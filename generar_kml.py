@@ -133,8 +133,7 @@ def agrupar_focos(focos):
     return grupos
 def cargar_municipios():
     wb = load_workbook("IGN_INFOGEO_MUNICIPIOS.xlsx", read_only=True, data_only=True)
-    ws = wb.active
-
+    ws = wb["IGN_INFOGEO_MUNICIPIOS"]
     municipios = []
 
     encabezados = [c.value for c in next(ws.iter_rows(min_row=1, max_row=1))]
