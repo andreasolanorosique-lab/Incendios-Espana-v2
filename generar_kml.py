@@ -241,9 +241,9 @@ for grupo in grupos:
 
     foco_principal = max(grupo, key=lambda f: f["frp"])
 
-    row = foco_principal["row"]
-    frp = foco_principal["frp"]
-    municipio, distancia = municipio_mas_cercano(lat, lon, municipios)
+row = foco_principal["row"]
+frp = foco_principal["frp"]
+municipio, distancia = municipio_mas_cercano(lat, lon, municipios)
 
 if distancia >= 1000:
     distancia_txt = f"{distancia / 1000:.1f} km"
