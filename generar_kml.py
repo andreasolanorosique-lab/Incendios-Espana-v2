@@ -163,6 +163,23 @@ def cargar_municipios():
 
     wb.close()
     return municipios
+def municipio_mas_cercano(lat, lon, municipios):
+    mejor = None
+    mejor_distancia = float("inf")
+
+    for municipio in municipios:
+        d = distancia_metros(
+            lat,
+            lon,
+            municipio["lat"],
+            municipio["lon"]
+        )
+
+        if d < mejor_distancia:
+            mejor_distancia = d
+            mejor = municipio
+
+    return mejor, mejor_distancia
 
 # =====================================================
 # LEER TODOS LOS FOCOS NASA
