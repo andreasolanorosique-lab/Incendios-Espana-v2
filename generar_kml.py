@@ -537,76 +537,7 @@ for grupo in grupos:
     ).text = f"{lon},{lat},0"
 
 
-    # ===========================================
-    # CÍRCULO DE DEPURACIÓN (solo primer incendio)
-    # ===========================================
-
-    if grupo is grupos[0]:
-
-        circulo = crear_circulo(
-            lat,
-            lon,
-            1000,
-        )
-
-        pm = ET.SubElement(
-            documento,
-            "Placemark",
-        )
-
-        estilo = ET.SubElement(
-            pm,
-            "Style",
-        )
-
-        linea = ET.SubElement(
-            estilo,
-            "LineStyle",
-        )
-
-        ET.SubElement(
-            linea,
-            "color",
-        ).text = "ff0000ff"
-
-        ET.SubElement(
-            linea,
-            "width",
-        ).text = "2"
-
-        relleno = ET.SubElement(
-            estilo,
-            "PolyStyle",
-        )
-
-        ET.SubElement(
-            relleno,
-            "color",
-        ).text = "300000ff"
-
-        polygon = ET.SubElement(
-            pm,
-            "Polygon",
-        )
-
-        outer = ET.SubElement(
-            polygon,
-            "outerBoundaryIs",
-        )
-
-        ring = ET.SubElement(
-            outer,
-            "LinearRing",
-        )
-
-        ET.SubElement(
-            ring,
-            "coordinates",
-        ).text = "\n".join(
-            f"{lon},{lat},0"
-            for lon, lat in circulo
-        )
-        # =====================================================
+# =====================================================
 # CARGAR RED DE GASODUCTOS
 # =====================================================
 
