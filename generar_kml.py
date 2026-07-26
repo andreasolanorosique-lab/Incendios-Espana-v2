@@ -279,6 +279,8 @@ else:
     <tr><td><b>Hora</b></td><td>{row.get('acq_time','')} UTC</td></tr>
     <tr><td><b>Satélite</b></td><td>{row.get('satellite','')}</td></tr>
     <tr><td><b>Instrumento</b></td><td>{row.get('instrument','')}</td></tr>
+    <tr><td><b>Población más cercana</b></td><td>{municipio["nombre"]}</td></tr>
+    <tr><td><b>Distancia</b></td><td>{distancia_txt}</td></tr>
     <tr><td><b>Latitud</b></td><td>{lat}</td></tr>
     <tr><td><b>Longitud</b></td><td>{lon}</td></tr>
     </table>
