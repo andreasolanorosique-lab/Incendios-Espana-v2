@@ -184,15 +184,15 @@ for grupo in grupos:
     frp = foco_principal["frp"]
 
     if frp < 50:
-        style = "#amarillo"
+        style = "#yellow"
         confianza = "Baja"
 
     elif frp < 100:
-        style = "#naranja"
+        style = "#orange"
         confianza = "Media"
 
     else:
-        style = "#rojo"
+        style = "#red"
         confianza = "Alta"
 
     pm = ET.SubElement(doc, "Placemark")
@@ -219,7 +219,7 @@ for grupo in grupos:
 
     pt = ET.SubElement(pm, "Point")
     ET.SubElement(pt, "coordinates").text = f"{lon},{lat},0"
-        # ===== CÍRCULO DE PRUEBA =====
+    # ===== CÍRCULO DE PRUEBA =====
 
     if grupo == grupos[0]:
 
