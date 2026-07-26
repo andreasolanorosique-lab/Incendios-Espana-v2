@@ -183,15 +183,12 @@ for grupo in grupos:
     row = foco_principal["row"]
     frp = foco_principal["frp"]
 
-    if frp < 20:
-        style = "#green"
-        confianza = "Muy baja"
-    elif frp < 50:
-        style = "#yellow"
-        confianza = "Baja"
+    if frp < 50:
+        style = "#amarillo"
     elif frp < 100:
-        style = "#orange"
-        confianza = "Media"
+        style = "#naranja"
+    else:
+        style = "#rojo"
     else:
         style = "#red"
         confianza = "Alta"
