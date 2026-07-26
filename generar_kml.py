@@ -454,12 +454,12 @@ for grupo in grupos:
 
     lat = sum(f["lat"] for f in grupo) / cantidad
     lon = sum(f["lon"] for f in grupo) / cantidad
-# Calcular el radio estimado del incendio
-radio = 0
+    # Calcular el radio estimado del incendio
+        radio = 0
 
-for foco in grupo:
+    for foco in grupo:
 
-    distancia = distancia_metros(
+distancia = distancia_metros(
         lat,
         lon,
         foco["lat"],
@@ -470,12 +470,12 @@ for foco in grupo:
         radio = distancia
 
 # Añadir margen de seguridad
-radio += 100
+    radio += 100
 
 # Limitar el tamaño del círculo
-radio = max(150, radio)
-radio = min(2500, radio)
-foco_principal = max(
+    radio = max(150, radio)
+    radio = min(2500, radio)
+    foco_principal = max(
         grupo,
         key=lambda f: f["frp"],
     )
