@@ -172,12 +172,12 @@ def distancia_metros(lat1, lon1, lat2, lon2):
     return radio_tierra * c
     def crear_circulo(lat, lon, radio_m, pasos=36):
 
-    radio_tierra = 6371000
+        radio_tierra = 6371000
 
-    puntos = []
+        puntos = []
 
-    lat1 = radians(lat)
-    lon1 = radians(lon)
+        lat1 = radians(lat)
+        lon1 = radians(lon)
 
     for i in range(pasos + 1):
 
