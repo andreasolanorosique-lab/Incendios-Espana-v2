@@ -195,7 +195,12 @@ with open("fires.csv", encoding="utf-8") as f:
 # =====================================================
 # AGRUPAR FOCOS
 # =====================================================
+# =====================================================
+# CARGAR MUNICIPIOS
+# =====================================================
 
+municipios = cargar_municipios()
+print(f"Municipios cargados: {len(municipios)}")
 grupos = agrupar_focos(focos)
 
 grupos = [
