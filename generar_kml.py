@@ -170,7 +170,7 @@ def distancia_metros(lat1, lon1, lat2, lon2):
     )
 
     return radio_tierra * c
-    def crear_circulo(lat, lon, radio_m, pasos=36):
+def crear_circulo(lat, lon, radio_m, pasos=36):
 
         radio_tierra = 6371000
 
