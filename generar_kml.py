@@ -171,42 +171,34 @@ def distancia_metros(lat1, lon1, lat2, lon2):
 
     return radio_tierra * c
 def crear_circulo(lat, lon, radio_m, pasos=36):
+    radio_tierra = 6371000
 
-        radio_tierra = 6371000
+    puntos = []
 
-        puntos = []
-
-        lat1 = radians(lat)
-        lon1 = radians(lon)
+    lat1 = radians(lat)
+    lon1 = radians(lon)
 
     for i in range(pasos + 1):
-
         angulo = radians(i * 360 / pasos)
 
         lat2 = asin(
             sin(lat1) * cos(radio_m / radio_tierra)
-            + cos(lat1)
-            * sin(radio_m / radio_tierra)
-            * cos(angulo)
+            + cos(lat1) * sin(radio_m / radio_tierra) * cos(angulo)
         )
 
         lon2 = lon1 + atan2(
-            sin(angulo)
-            * sin(radio_m / radio_tierra)
-            * cos(lat1),
-            cos(radio_m / radio_tierra)
-            - sin(lat1) * sin(lat2),
+            sin(angulo) * sin(radio_m / radio_tierra) * cos(lat1),
+            cos(radio_m / radio_tierra) - sin(lat1) * sin(lat2),
         )
 
         puntos.append(
             (
-                degrees(lon2),
                 degrees(lat2),
+                degrees(lon2),
             )
         )
 
     return puntos
-
 
 def agrupar_focos(focos):
 
