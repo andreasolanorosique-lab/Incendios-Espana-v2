@@ -455,7 +455,7 @@ for grupo in grupos:
         placemark,
         "name",
     ).text = ""
-        descripcion = f"""
+    descripcion = f"""
     <![CDATA[
     <h2>🔥 Incendio activo</h2>
 
