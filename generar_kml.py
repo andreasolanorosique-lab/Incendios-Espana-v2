@@ -137,7 +137,37 @@ for nombre_estilo, (icono, escala) in ESTILOS.items():
         label,
         "scale",
     ).text = "0"
+# Estilo del área amarilla
+estilo = ET.SubElement(
+    documento,
+    "Style",
+    id="area_amarilla",
+)
 
+line_style = ET.SubElement(
+    estilo,
+    "LineStyle",
+)
+
+ET.SubElement(
+    line_style,
+    "color",
+).text = "ff00ffff"
+
+ET.SubElement(
+    line_style,
+    "width",
+).text = "2"
+
+poly_style = ET.SubElement(
+    estilo,
+    "PolyStyle",
+)
+
+ET.SubElement(
+    poly_style,
+    "color",
+).text = "5500ffff"
 
 # =====================================================
 # FUNCIONES GEOGRÁFICAS
@@ -170,6 +200,39 @@ def distancia_metros(lat1, lon1, lat2, lon2):
     )
 
     return radio_tierra * c
+def calcular_radio_grupo(grupo):
+    """
+    Calcula el centro del grupo y el radio estimado.
+    Devuelve:
+        lat_centro, lon_centro, radio
+    """
+
+    lat_centro = sum(p["lat"] for p in grupo) / len(grupo)
+    lon_centro = sum(p["lon"] for p in grupo) / len(grupo)
+
+    radio = 0
+
+    for punto in grupo:
+
+        distancia = distancia_metros(
+            lat_centro,
+            lon_centro,
+            punto["lat"],
+            punto["lon"],
+        )
+
+        if distancia > radio:
+            radio = distancia
+
+    # Margen de seguridad
+    radio += 100
+
+    # Límites
+    radio = max(150, radio)
+    radio = min(2500, radio)
+
+    return lat_centro, lon_centro, radio
+
 def crear_circulo(lat, lon, radio_m, pasos=36):
     radio_tierra = 6371000
 
@@ -391,8 +454,28 @@ for grupo in grupos:
 
     lat = sum(f["lat"] for f in grupo) / cantidad
     lon = sum(f["lon"] for f in grupo) / cantidad
+# Calcular el radio estimado del incendio
+radio = 0
 
-    foco_principal = max(
+for foco in grupo:
+
+    distancia = distancia_metros(
+        lat,
+        lon,
+        foco["lat"],
+        foco["lon"],
+    )
+
+    if distancia > radio:
+        radio = distancia
+
+# Añadir margen de seguridad
+radio += 100
+
+# Limitar el tamaño del círculo
+radio = max(150, radio)
+radio = min(2500, radio)
+foco_principal = max(
         grupo,
         key=lambda f: f["frp"],
     )
@@ -622,6 +705,7 @@ for tramo in gasoductos:
     )
 
 print(f"Gasoductos cargados: {len(gasoductos)}")
+
 # =====================================================
 # ESCRIBIR KML
 # =====================================================
