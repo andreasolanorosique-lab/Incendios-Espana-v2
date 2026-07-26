@@ -165,7 +165,11 @@ with open("fires.csv", encoding="utf-8") as f:
 
 grupos = agrupar_focos(focos)
 
-grupos = [grupo for grupo in grupos if len(grupo) > 1]
+grupos = [
+    grupo
+    for grupo in grupos
+    if len(grupo) > 1 or max(f["frp"] for f in grupo) >= 100
+]
 
 # =====================================================
 # CREAR PLACEMARKS
