@@ -29,6 +29,7 @@ ET.SubElement(doc, "name").text = "Incendios activos España"
 BASE = "https://andreasolanorosique-lab.github.io/Incendios-Espana-v2/icons/"
 
 styles = {
+    "pink": ("fire_pink.png", 1.0),
     "green": ("fire_green.png", 1.0),
     "yellow": ("fire_yellow.png", 1.0),
     "orange": ("fire_orange.png", 1.0),
@@ -184,16 +185,20 @@ for grupo in grupos:
     frp = foco_principal["frp"]
 
     if frp < 50:
-        style = "#yellow"
+        style = "#pink"
         confianza = "Baja"
 
     elif frp < 100:
-        style = "#orange"
+        style = "#yellow"
         confianza = "Media"
+
+    elif frp < 200:
+        style = "#orange"
+        confianza = "Alta"
 
     else:
         style = "#red"
-        confianza = "Alta"
+        confianza = "Muy alta"
 
     pm = ET.SubElement(doc, "Placemark")
     ET.SubElement(pm, "styleUrl").text = style
