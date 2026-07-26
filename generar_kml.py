@@ -129,6 +129,39 @@ def agrupar_focos(focos):
             grupos.append([foco])
 
     return grupos
+def cargar_municipios():
+    wb = load_workbook("IGN_INFOGEO_MUNICIPIOS.xlsx", read_only=True, data_only=True)
+    ws = wb.active
+
+    municipios = []
+
+    encabezados = [c.value for c in next(ws.iter_rows(min_row=1, max_row=1))]
+
+    idx_nombre = encabezados.index("Nombre")
+    idx_mapa = encabezados.index("Ver en mapa")
+
+    for fila in ws.iter_rows(min_row=2, values_only=True):
+        nombre = fila[idx_nombre]
+        url = fila[idx_mapa]
+
+        if not nombre or not url:
+            continue
+
+        m = re.search(r"center=([-\d\.]+),([-\d\.]+)", url)
+        if not m:
+            continue
+
+        lon = float(m.group(1))
+        lat = float(m.group(2))
+
+        municipios.append({
+            "nombre": nombre,
+            "lat": lat,
+            "lon": lon
+        })
+
+    wb.close()
+    return municipios
 
 # =====================================================
 # LEER TODOS LOS FOCOS NASA
