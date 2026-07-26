@@ -183,7 +183,7 @@ for grupo in grupos:
     row = foco_principal["row"]
     frp = foco_principal["frp"]
 
-     if frp < 50:
+    if frp < 50:
         style = "#amarillo"
         confianza = "Baja"
 
