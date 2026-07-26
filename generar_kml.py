@@ -168,7 +168,7 @@ grupos = agrupar_focos(focos)
 grupos = [
     grupo
     for grupo in grupos
-    if len(grupo) > 1 or max(f["frp"] for f in grupo) >= 100
+    if len(grupo) > 1 or max(f["frp"] for f in grupo) >= 50
 ]
 
 # =====================================================
