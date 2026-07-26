@@ -7844,12 +7844,12 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;FRP máximo&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;6.4 MW&lt;/td&gt;
+            &lt;td&gt;11.6 MW&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
@@ -7864,7 +7864,7 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;1255 UTC&lt;/td&gt;
+            &lt;td&gt;1435 UTC&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
@@ -7884,17 +7884,17 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Distancia&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;3.9 km&lt;/td&gt;
+            &lt;td&gt;4.0 km&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;40.284315&lt;/td&gt;
+            &lt;td&gt;40.284123&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;-4.677835&lt;/td&gt;
+            &lt;td&gt;-4.678935&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/table&gt;
@@ -7902,7 +7902,7 @@
     ]]&gt;
     </description>
       <Point>
-        <coordinates>-4.677835,40.28431500000001,0</coordinates>
+        <coordinates>-4.678935,40.2841225,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -10796,7 +10796,7 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
@@ -10836,17 +10836,17 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Distancia&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;2.8 km&lt;/td&gt;
+            &lt;td&gt;2.9 km&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;40.304140&lt;/td&gt;
+            &lt;td&gt;40.304542&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;-4.805667&lt;/td&gt;
+            &lt;td&gt;-4.805508&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/table&gt;
@@ -10854,7 +10854,7 @@
     ]]&gt;
     </description>
       <Point>
-        <coordinates>-4.805666666666667,40.30414,0</coordinates>
+        <coordinates>-4.805507500000001,40.3045425,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -17060,7 +17060,7 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
@@ -17100,17 +17100,17 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Distancia&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;3.2 km&lt;/td&gt;
+            &lt;td&gt;3.1 km&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;40.325957&lt;/td&gt;
+            &lt;td&gt;40.326350&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;-4.610150&lt;/td&gt;
+            &lt;td&gt;-4.609405&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/table&gt;
@@ -17118,7 +17118,7 @@
     ]]&gt;
     </description>
       <Point>
-        <coordinates>-4.61015,40.32595666666666,0</coordinates>
+        <coordinates>-4.609405,40.32635,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -17564,7 +17564,7 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
@@ -17604,17 +17604,17 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Distancia&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;937 m&lt;/td&gt;
+            &lt;td&gt;956 m&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;40.326653&lt;/td&gt;
+            &lt;td&gt;40.326902&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;-4.697013&lt;/td&gt;
+            &lt;td&gt;-4.698050&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/table&gt;
@@ -17622,7 +17622,7 @@
     ]]&gt;
     </description>
       <Point>
-        <coordinates>-4.6970133333333335,40.32665333333333,0</coordinates>
+        <coordinates>-4.69805,40.326902499999996,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -18068,7 +18068,7 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
@@ -18113,12 +18113,12 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;40.328438&lt;/td&gt;
+            &lt;td&gt;40.328290&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;-4.612438&lt;/td&gt;
+            &lt;td&gt;-4.613073&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/table&gt;
@@ -18126,7 +18126,7 @@
     ]]&gt;
     </description>
       <Point>
-        <coordinates>-4.612437999999999,40.328438,0</coordinates>
+        <coordinates>-4.613073333333333,40.32829,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -19076,7 +19076,7 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
@@ -19121,12 +19121,12 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;40.332844&lt;/td&gt;
+            &lt;td&gt;40.333198&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;-4.676338&lt;/td&gt;
+            &lt;td&gt;-4.677157&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/table&gt;
@@ -19134,7 +19134,7 @@
     ]]&gt;
     </description>
       <Point>
-        <coordinates>-4.676338,40.332844,0</coordinates>
+        <coordinates>-4.677156666666668,40.333198333333335,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -19580,7 +19580,7 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
@@ -19625,12 +19625,12 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;40.332980&lt;/td&gt;
+            &lt;td&gt;40.333483&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;-4.702967&lt;/td&gt;
+            &lt;td&gt;-4.703130&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/table&gt;
@@ -19638,7 +19638,7 @@
     ]]&gt;
     </description>
       <Point>
-        <coordinates>-4.702966666666667,40.33298,0</coordinates>
+        <coordinates>-4.70313,40.3334825,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -19927,6 +19927,78 @@
     </description>
       <Point>
         <coordinates>-4.60674,40.33377,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#pink</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+
+    &lt;table border="0" cellpadding="4"&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;FRP máximo&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;5.6 MW&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Baja&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2026-07-26&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;1435 UTC&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;N&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;VIIRS&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Población más cercana&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Casillas&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Distancia&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;3.5 km&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;40.333605&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;-4.612800&lt;/td&gt;
+        &lt;/tr&gt;
+
+    &lt;/table&gt;
+
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-4.6128,40.333605,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -22388,12 +22460,12 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;FRP máximo&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;4.5 MW&lt;/td&gt;
+            &lt;td&gt;7.1 MW&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
@@ -22408,7 +22480,7 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;313 UTC&lt;/td&gt;
+            &lt;td&gt;1435 UTC&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
@@ -22433,12 +22505,12 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;40.372415&lt;/td&gt;
+            &lt;td&gt;40.372197&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;-4.557580&lt;/td&gt;
+            &lt;td&gt;-4.557987&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/table&gt;
@@ -22446,7 +22518,7 @@
     ]]&gt;
     </description>
       <Point>
-        <coordinates>-4.55758,40.372415000000004,0</coordinates>
+        <coordinates>-4.557986666666666,40.37219666666667,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -22460,7 +22532,7 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
@@ -22500,17 +22572,17 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Distancia&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;5.6 km&lt;/td&gt;
+            &lt;td&gt;5.5 km&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;40.373430&lt;/td&gt;
+            &lt;td&gt;40.372848&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;-4.563303&lt;/td&gt;
+            &lt;td&gt;-4.563725&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/table&gt;
@@ -22518,7 +22590,7 @@
     ]]&gt;
     </description>
       <Point>
-        <coordinates>-4.563303333333333,40.373430000000006,0</coordinates>
+        <coordinates>-4.563725,40.372847500000006,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -27284,7 +27356,7 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
@@ -27329,12 +27401,12 @@
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;40.341180&lt;/td&gt;
+            &lt;td&gt;40.341585&lt;/td&gt;
         &lt;/tr&gt;
 
         &lt;tr&gt;
             &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
-            &lt;td&gt;-4.593290&lt;/td&gt;
+            &lt;td&gt;-4.593090&lt;/td&gt;
         &lt;/tr&gt;
 
     &lt;/table&gt;
@@ -27342,7 +27414,7 @@
     ]]&gt;
     </description>
       <Point>
-        <coordinates>-4.59329,40.341179999999994,0</coordinates>
+        <coordinates>-4.59309,40.341584999999995,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -27991,6 +28063,294 @@
     </description>
       <Point>
         <coordinates>-6.930983333333333,42.69820000000001,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#pink</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+
+    &lt;table border="0" cellpadding="4"&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;FRP máximo&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;9.3 MW&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Baja&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2026-07-26&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;1435 UTC&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;N&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;VIIRS&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Población más cercana&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Villanueva de Ávila&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Distancia&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;6.0 km&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;40.335175&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;-4.780625&lt;/td&gt;
+        &lt;/tr&gt;
+
+    &lt;/table&gt;
+
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-4.780625000000001,40.335175,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#pink</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+
+    &lt;table border="0" cellpadding="4"&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;FRP máximo&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;19.0 MW&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Baja&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2026-07-26&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;1435 UTC&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;N&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;VIIRS&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Población más cercana&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Casillas&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Distancia&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2.1 km&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;40.341940&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;-4.579955&lt;/td&gt;
+        &lt;/tr&gt;
+
+    &lt;/table&gt;
+
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-4.579955,40.341939999999994,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#pink</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+
+    &lt;table border="0" cellpadding="4"&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;FRP máximo&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;19.6 MW&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Baja&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2026-07-26&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;1435 UTC&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;N&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;VIIRS&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Población más cercana&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Casillas&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Distancia&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;3.4 km&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;40.349365&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;-4.594690&lt;/td&gt;
+        &lt;/tr&gt;
+
+    &lt;/table&gt;
+
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-4.59469,40.349365000000006,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#pink</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+
+    &lt;table border="0" cellpadding="4"&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;FRP máximo&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;22.0 MW&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Baja&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2026-07-26&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;1435 UTC&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;N&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;VIIRS&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Población más cercana&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Casillas&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Distancia&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;3.9 km&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;40.349390&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;-4.603915&lt;/td&gt;
+        &lt;/tr&gt;
+
+    &lt;/table&gt;
+
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-4.603915,40.34939,0</coordinates>
       </Point>
     </Placemark>
     <Folder>
