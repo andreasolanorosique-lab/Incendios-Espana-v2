@@ -35,7 +35,11 @@ URL = (
     f"https://firms.modaps.eosdis.nasa.gov/api/area/csv/"
     f"{MAP_KEY}/{SOURCE}/{BBOX}/1"
 )
-
+EFFIS_URL = (
+    "https://services-eu1.arcgis.com/"
+    "VC42ANIVJ5dUfvUn/ArcGIS/rest/services/"
+    "Burned_Areas_EFFIS/FeatureServer/23/query"
+)
 
 print("Descargando datos NASA FIRMS...")
 
@@ -384,7 +388,35 @@ def municipio_mas_cercano(lat, lon, municipios):
             mejor = municipio
 
     return mejor, mejor_distancia
+def buscar_effis(lat, lon):
 
+    params = {
+        "f": "json",
+        "geometry": f"{lon},{lat}",
+        "geometryType": "esriGeometryPoint",
+        "spatialRel": "esriSpatialRelIntersects",
+        "inSR": "4326",
+        "outFields": "*",
+        "returnGeometry": "true"
+    }
+
+    r = requests.get(
+        EFFIS_URL,
+        params=params,
+        timeout=30
+    )
+
+    r.raise_for_status()
+
+    datos = r.json()
+
+    if "features" not in datos:
+        return None
+
+    if len(datos["features"]) == 0:
+        return None
+
+    return datos["features"][0]
 
 # =====================================================
 # LEER TODOS LOS FOCOS NASA
@@ -431,7 +463,15 @@ municipios = cargar_municipios()
 grupos = agrupar_focos(focos)
 
 print(f"Grupos detectados: {len(grupos)}")
+grupo = grupos[0]
 
+lat = sum(f["lat"] for f in grupo) / len(grupo)
+lon = sum(f["lon"] for f in grupo) / len(grupo)
+
+resultado = buscar_effis(lat, lon)
+
+print(resultado)
+exit()
 
 # Elimina focos aislados muy débiles
 grupos = [
