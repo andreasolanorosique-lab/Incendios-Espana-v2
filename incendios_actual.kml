@@ -674,6 +674,28 @@
     &lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;&lt;td&gt;134 UTC&lt;/td&gt;&lt;/tr&gt;
     &lt;tr&gt;&lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;&lt;td&gt;N&lt;/td&gt;&lt;/tr&gt;
     &lt;tr&gt;&lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;&lt;td&gt;VIIRS&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;39.85582&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;-0.25031&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-0.25031,39.85582,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#yellow</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+    &lt;table border="0" cellpadding="4"&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;FRP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;63.7 MW&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Media&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;&lt;td&gt;2026-07-26&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;&lt;td&gt;134 UTC&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;&lt;td&gt;N&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;&lt;td&gt;VIIRS&lt;/td&gt;&lt;/tr&gt;
     &lt;tr&gt;&lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;39.85597&lt;/td&gt;&lt;/tr&gt;
     &lt;tr&gt;&lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;-0.25749&lt;/td&gt;&lt;/tr&gt;
     &lt;/table&gt;
@@ -681,6 +703,28 @@
     </description>
       <Point>
         <coordinates>-0.25749,39.85597,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#yellow</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+    &lt;table border="0" cellpadding="4"&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;FRP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;63.7 MW&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Media&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;&lt;td&gt;2026-07-26&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;&lt;td&gt;134 UTC&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;&lt;td&gt;N&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;&lt;td&gt;VIIRS&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;39.86023&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;-0.24919&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-0.24919,39.86023,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -2378,6 +2422,28 @@
       </Point>
     </Placemark>
     <Placemark>
+      <styleUrl>#yellow</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+    &lt;table border="0" cellpadding="4"&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;FRP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;59.5 MW&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Media&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;&lt;td&gt;2026-07-26&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;&lt;td&gt;134 UTC&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;&lt;td&gt;N&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;&lt;td&gt;VIIRS&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;40.28485&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;-4.80813&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-4.80813,40.28485,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
       <styleUrl>#pink</styleUrl>
       <name />
       <description>
@@ -2397,6 +2463,28 @@
     </description>
       <Point>
         <coordinates>-4.68735,40.284275,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#yellow</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+    &lt;table border="0" cellpadding="4"&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;FRP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;59.5 MW&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Media&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;&lt;td&gt;2026-07-26&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;&lt;td&gt;134 UTC&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;&lt;td&gt;N&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;&lt;td&gt;VIIRS&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;40.28505&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;-4.81255&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-4.81255,40.28505,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -2639,6 +2727,28 @@
     </description>
       <Point>
         <coordinates>-4.804025,40.291285,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#yellow</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+    &lt;table border="0" cellpadding="4"&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;FRP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;59.5 MW&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Media&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;&lt;td&gt;2026-07-26&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;&lt;td&gt;134 UTC&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;&lt;td&gt;N&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;&lt;td&gt;VIIRS&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;40.29064&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;-4.80912&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-4.80912,40.29064,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
@@ -7325,6 +7435,28 @@
     </description>
       <Point>
         <coordinates>-4.36113,40.4234,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#yellow</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+    &lt;table border="0" cellpadding="4"&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;FRP&lt;/b&gt;&lt;/td&gt;&lt;td&gt;66.2 MW&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Media&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;&lt;td&gt;2026-07-26&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;&lt;td&gt;313 UTC&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;&lt;td&gt;N&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;&lt;td&gt;VIIRS&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;39.846&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;&lt;td&gt;-0.26285&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-0.26285,39.846,0</coordinates>
       </Point>
     </Placemark>
     <Placemark>
