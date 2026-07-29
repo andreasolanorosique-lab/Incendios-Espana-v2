@@ -26,7 +26,7 @@ MAP_KEY = os.environ["FIRMS_MAP_KEY"]
 
 SOURCE = "VIIRS_SNPP_NRT"
 
-BBOX = "-10,35,5,44"
+BBOX = "world"
 AVAILABILITY_URL = (
     f"https://firms.modaps.eosdis.nasa.gov/api/data_availability/csv/"
     f"{MAP_KEY}/ALL"
@@ -37,7 +37,7 @@ DISTANCIA_AGRUPACION = 300      # metros
 
 URL = (
     f"https://firms.modaps.eosdis.nasa.gov/api/area/csv/"
-    f"{MAP_KEY}/{SOURCE}/{BBOX}/7"
+    f"{MAP_KEY}/{SOURCE}/{BBOX}/1"
 )
 EFFIS_URL = (
     "https://services-eu1.arcgis.com/"
