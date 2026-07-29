@@ -37,7 +37,7 @@ DISTANCIA_AGRUPACION = 300      # metros
 
 URL = (
     f"https://firms.modaps.eosdis.nasa.gov/api/area/csv/"
-    f"{MAP_KEY}/{SOURCE}/{BBOX}/1"
+    f"{MAP_KEY}/{SOURCE}/{BBOX}/7"
 )
 EFFIS_URL = (
     "https://services-eu1.arcgis.com/"
@@ -472,7 +472,7 @@ municipios = cargar_municipios()
 grupos = agrupar_focos(focos)
 
 print(f"Grupos detectados: {len(grupos)}")
-grupo = grupos[0]
+
 
 lat = sum(f["lat"] for f in grupo) / len(grupo)
 lon = sum(f["lon"] for f in grupo) / len(grupo)
