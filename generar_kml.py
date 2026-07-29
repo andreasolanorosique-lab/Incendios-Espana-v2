@@ -487,12 +487,12 @@ grupos = agrupar_focos(focos)
 print(f"Grupos detectados: {len(grupos)}")
 
 # Elimina focos aislados muy débiles
-grupos = [
-    grupo
-    for grupo in grupos
-    if len(grupo) > 1
-    or max(f["frp"] for f in grupo) >= 50
-]
+#grupos = [
+#    grupo
+#    for grupo in grupos
+#    if len(grupo) > 1
+#    or max(f["frp"] for f in grupo) >= 50
+#]
 
 print(f"Grupos tras el filtrado: {len(grupos)}")
 
