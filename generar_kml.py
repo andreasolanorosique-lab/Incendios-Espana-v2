@@ -61,6 +61,11 @@ for intento in range(3):
         with open("fires.csv", "wb") as f:
             f.write(respuesta.content)
 
+        print("URL:", URL)
+        print("Código HTTP:", respuesta.status_code)
+        print("Primeros 1000 caracteres:")
+        print(respuesta.text[:1000])
+
         print("Datos descargados correctamente.")
 
         DESCARGADO = True
