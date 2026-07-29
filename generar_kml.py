@@ -24,17 +24,18 @@ from openpyxl import load_workbook
 
 MAP_KEY = os.environ["FIRMS_MAP_KEY"]
 
-SOURCE = "VIIRS_SNPP_NRT"
+SOURCES = [
+    "VIIRS_SNPP_NRT",
+    "VIIRS_NOAA20_NRT",
+    "VIIRS_NOAA21_NRT",
+]
 
 BBOX = "-10,35,5,44"
 
 DISTANCIA_AGRUPACION = 300      # metros
 
 
-URL = (
-    f"https://firms.modaps.eosdis.nasa.gov/api/area/csv/"
-    f"{MAP_KEY}/{SOURCE}/{BBOX}/1"
-)
+
 EFFIS_URL = (
     "https://services-eu1.arcgis.com/"
     "VC42ANIVJ5dUfvUn/ArcGIS/rest/services/"
@@ -43,14 +44,35 @@ EFFIS_URL = (
 
 print("Descargando datos NASA FIRMS...")
 
-respuesta = requests.get(URL, timeout=120)
-respuesta.raise_for_status()
+with open("fires.csv", "wb") as salida:
 
-with open("fires.csv", "wb") as f:
-    f.write(respuesta.content)
+    primera = True
+
+    for source in SOURCES:
+
+        url = (
+            "https://firms.modaps.eosdis.nasa.gov/api/area/csv/"
+            f"{MAP_KEY}/{source}/{BBOX}/1"
+        )
+
+        print(f"  -> {source}")
+
+        respuesta = requests.get(url, timeout=120)
+        respuesta.raise_for_status()
+
+        lineas = respuesta.text.strip().splitlines()
+
+        if len(lineas) <= 1:
+            continue
+
+        if primera:
+            salida.write((lineas[0] + "\n").encode("utf-8"))
+            primera = False
+
+        for linea in lineas[1:]:
+            salida.write((linea + "\n").encode("utf-8"))
 
 print("Datos descargados correctamente.")
-
 
 # =====================================================
 # CREAR KML
