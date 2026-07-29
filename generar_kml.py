@@ -482,8 +482,7 @@ print(f"Focos leídos: {len(focos)}")
 
 municipios = cargar_municipios()
 
-grupos = [[foco] for foco in focos]upos = agrupar_focos(focos)
-
+grupos = [[foco] for foco in focos]
 print(f"Grupos detectados: {len(grupos)}")
 
 # Elimina focos aislados muy débiles
