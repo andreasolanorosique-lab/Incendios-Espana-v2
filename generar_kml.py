@@ -498,7 +498,7 @@ for grupo in grupos:
     )
 
         if distancia > radio:
-           radio = distancia
+            radio = distancia
 
     # Añadir margen de seguridad
     radio += 100
