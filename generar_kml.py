@@ -27,6 +27,10 @@ MAP_KEY = os.environ["FIRMS_MAP_KEY"]
 SOURCE = "VIIRS_SNPP_NRT"
 
 BBOX = "-10,35,5,44"
+AVAILABILITY_URL = (
+    f"https://firms.modaps.eosdis.nasa.gov/api/data_availability/csv/"
+    f"{MAP_KEY}/ALL"
+)
 
 DISTANCIA_AGRUPACION = 300      # metros
 
@@ -40,7 +44,12 @@ EFFIS_URL = (
     "VC42ANIVJ5dUfvUn/ArcGIS/rest/services/"
     "Burned_Areas_EFFIS/FeatureServer/23/query"
 )
+print("Comprobando disponibilidad de datos...")
 
+r = requests.get(AVAILABILITY_URL, timeout=30)
+r.raise_for_status()
+
+print(r.text)
 print("Descargando datos NASA FIRMS...")
 
 respuesta = requests.get(URL, timeout=120)
