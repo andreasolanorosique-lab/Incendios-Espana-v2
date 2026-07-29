@@ -226,7 +226,7 @@ def calcular_radio_grupo(grupo):
         )
 
         if distancia > radio:
-            radio = distancia
+        radio = distancia
 
     # Margen de seguridad
     radio += 100
@@ -498,7 +498,7 @@ for grupo in grupos:
     )
 
         if distancia > radio:
-        radio = distancia
+           radio = distancia
 
     # Añadir margen de seguridad
     radio += 100
