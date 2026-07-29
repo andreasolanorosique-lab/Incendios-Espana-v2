@@ -16,6 +16,9 @@ from math import (
 )
 
 from openpyxl import load_workbook
+from datetime import datetime
+
+FECHA_ACTUALIZACION = datetime.utcnow().strftime("%d/%m/%Y %H:%M UTC")
 
 
 # =====================================================
@@ -43,15 +46,45 @@ EFFIS_URL = (
 
 print("Descargando datos NASA FIRMS...")
 
-respuesta = requests.get(URL, timeout=120)
-respuesta.raise_for_status()
+DESCARGADO = False
 
-with open("fires.csv", "wb") as f:
-    f.write(respuesta.content)
+for intento in range(3):
 
-print("Datos descargados correctamente.")
+    try:
 
+        print(f"Intento {intento + 1}/3...")
 
+        respuesta = requests.get(URL, timeout=120)
+
+        respuesta.raise_for_status()
+
+        with open("fires.csv", "wb") as f:
+            f.write(respuesta.content)
+
+        print("Datos descargados correctamente.")
+
+        DESCARGADO = True
+        break
+
+    except Exception as e:
+
+        print(f"Error durante la descarga: {e}")
+
+        if intento < 2:
+            print("Reintentando...")
+
+if not DESCARGADO:
+
+    print("")
+    print("========================================")
+    print("⚠ No se pudo descargar NASA FIRMS")
+    print("Se utilizará el archivo fires.csv existente")
+    print("========================================")
+
+    if not os.path.exists("fires.csv"):
+        raise RuntimeError(
+            "No existe fires.csv y no ha sido posible descargarlo."
+        )
 # =====================================================
 # CREAR KML
 # =====================================================
@@ -454,6 +487,32 @@ with open(
         )
 
 print(f"Focos leídos: {len(focos)}")
+from datetime import datetime
+
+fechas = sorted(
+    {
+        f["row"]["acq_date"]
+        for f in focos
+        if f["row"].get("acq_date")
+    }
+)
+
+if fechas:
+
+    ultima = fechas[-1]
+
+    print(f"Última fecha NASA : {ultima}")
+
+    hoy = datetime.utcnow().strftime("%Y-%m-%d")
+
+    if ultima != hoy:
+
+        print("")
+        print("========================================")
+        print("⚠ AVISO")
+        print(f"Los datos NO son de hoy ({hoy})")
+        print(f"Última fecha disponible: {ultima}")
+        print("========================================")
 # =====================================================
 # AGRUPAR FOCOS
 # =====================================================
@@ -625,15 +684,14 @@ for grupo in grupos:
         </tr>
 
         <tr>
-            <td><b>Fecha</b></td>
-            <td>{row.get("acq_date","")}</td>
+            <td><b>Última detección NASA</b></td>
+            <td>{row.get("acq_date","")} {row.get("acq_time","")} UTC</td>
         </tr>
 
         <tr>
-            <td><b>Hora</b></td>
-            <td>{row.get("acq_time","")} UTC</td>
+            <td><b>Última actualización del mapa</b></td>
+            <td>{FECHA_ACTUALIZACION}</td>
         </tr>
-
         <tr>
             <td><b>Satélite</b></td>
             <td>{row.get("satellite","")}</td>
