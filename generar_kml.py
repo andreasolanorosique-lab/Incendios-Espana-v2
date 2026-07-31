@@ -74,6 +74,10 @@ with open("fires.csv", "wb") as salida:
 
 print("Datos descargados correctamente.")
 
+with open("fires.csv", "r", encoding="utf-8") as f:
+    print("=== Primeras líneas de fires.csv ===")
+    for i in range(10):
+        print(f.readline().rstrip())
 # =====================================================
 # CREAR KML
 # =====================================================
