@@ -528,7 +528,64 @@ print(f"Grupos tras el filtrado: {len(grupos)}")
 
 if len(grupos) == 0:
     print(">>> Entrando en el bloque SIN INCENDIOS <<<")
+    if len(grupos) == 0:
+    print(">>> Entrando en el bloque SIN INCENDIOS <<<")
 
+    overlay = ET.SubElement(documento, "ScreenOverlay")
+
+    ET.SubElement(
+        overlay,
+        "name"
+    ).text = "Sin incendios"
+
+    icon = ET.SubElement(
+        overlay,
+        "Icon"
+    )
+
+    ET.SubElement(
+        icon,
+        "href"
+    ).text = (
+        "https://andreasolanorosique-lab.github.io/"
+        "Incendios-Espana-v2/icons/no_incendios.png"
+    )
+
+    ET.SubElement(
+        overlay,
+        "overlayXY",
+        x="0",
+        y="0",
+        xunits="fraction",
+        yunits="fraction"
+    )
+
+    ET.SubElement(
+        overlay,
+        "screenXY",
+        x="0.02",
+        y="0.02",
+        xunits="fraction",
+        yunits="fraction"
+    )
+
+    ET.SubElement(
+        overlay,
+        "rotationXY",
+        x="0",
+        y="0",
+        xunits="fraction",
+        yunits="fraction"
+    )
+
+    ET.SubElement(
+        overlay,
+        "size",
+        x="0",
+        y="0.45",
+        xunits="fraction",
+        yunits="fraction"
+    )
     placemark = ET.SubElement(
         documento,
         "Placemark",
