@@ -68,10 +68,6 @@ with open("fires.csv", "wb") as salida:
         lineas = respuesta.text.strip().splitlines()
 
         if len(lineas) <= 1:
-
-        lineas = respuesta.text.strip().splitlines()
-
-        if len(lineas) <= 1:
             continue
 
         if primera:
