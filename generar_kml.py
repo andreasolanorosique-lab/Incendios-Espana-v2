@@ -509,7 +509,8 @@ print(f"Focos leídos: {len(focos)}")
 
 municipios = cargar_municipios()
 
-grupos = [[foco] for foco in focos]
+grupos = []
+print(">>> MODO PRUEBA: simulando que no hay incendios <<<")
 print(f"Grupos detectados: {len(grupos)}")
 
 # Elimina focos aislados muy débiles
