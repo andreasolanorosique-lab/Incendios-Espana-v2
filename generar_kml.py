@@ -3,6 +3,7 @@ import csv
 import json
 import re
 import requests
+import time
 import xml.etree.ElementTree as ET
 
 from math import (
