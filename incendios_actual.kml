@@ -68,6 +68,7 @@
     </Style>
     <Placemark>
       <styleUrl>#green</styleUrl>
+      <styleUrl>#green</styleUrl>
       <name>Sin incendios activos</name>
       <description>
     &lt;![CDATA[
