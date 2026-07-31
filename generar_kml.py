@@ -53,7 +53,7 @@ with open("fires.csv", "wb") as salida:
 
         url = (
             "https://firms.modaps.eosdis.nasa.gov/api/area/csv/"
-            ff"{MAP_KEY}/{source}/{BBOX}/1"
+            f"{MAP_KEY}/{source}/{BBOX}/1"
         )
 
         print(f"  -> {source}")
