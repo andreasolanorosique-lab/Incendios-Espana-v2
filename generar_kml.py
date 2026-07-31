@@ -31,7 +31,7 @@ SOURCES = [
     "VIIRS_NOAA21_NRT",
 ]
 
-BBOX = "-10,35,5,44"
+BBOX = "-15,30,10,46"
 
 DISTANCIA_AGRUPACION = 300      # metros
 
