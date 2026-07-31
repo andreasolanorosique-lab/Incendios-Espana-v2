@@ -501,7 +501,7 @@ print(f"Grupos tras el filtrado: {len(grupos)}")
 # =====================================================
 
 for grupo in grupos:
-print("Creando incendio...")
+    print("Creando incendio...")
     cantidad = len(grupo)
 
     lat = sum(f["lat"] for f in grupo) / cantidad
