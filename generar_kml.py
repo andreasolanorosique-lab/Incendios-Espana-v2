@@ -528,9 +528,7 @@ print(f"Grupos tras el filtrado: {len(grupos)}")
 
 if len(grupos) == 0:
     print(">>> Entrando en el bloque SIN INCENDIOS <<<")
-    if len(grupos) == 0:
-    print(">>> Entrando en el bloque SIN INCENDIOS <<<")
-
+    
     overlay = ET.SubElement(documento, "ScreenOverlay")
 
     ET.SubElement(
