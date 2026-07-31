@@ -584,65 +584,7 @@ if len(grupos) == 0:
         xunits="fraction",
         yunits="fraction"
     )
-   if len(grupos) == 0:
-
-    print(">>> SIN INCENDIOS <<<")
-
-    overlay = ET.SubElement(documento, "ScreenOverlay")
-
-    ET.SubElement(
-        overlay,
-        "name"
-    ).text = "Sin incendios"
-
-    icon = ET.SubElement(
-        overlay,
-        "Icon"
-    )
-
-    ET.SubElement(
-        icon,
-        "href"
-    ).text = (
-        "https://andreasolanorosique-lab.github.io/"
-        "Incendios-Espana-v2/icons/no_incendios.png"
-    )
-
-    ET.SubElement(
-        overlay,
-        "overlayXY",
-        x="0",
-        y="0",
-        xunits="fraction",
-        yunits="fraction"
-    )
-
-    ET.SubElement(
-        overlay,
-        "screenXY",
-        x="0.08",
-        y="0.12",
-        xunits="fraction",
-        yunits="fraction"
-    )
-
-    ET.SubElement(
-        overlay,
-        "rotationXY",
-        x="0",
-        y="0",
-        xunits="fraction",
-        yunits="fraction"
-    )
-
-    ET.SubElement(
-        overlay,
-        "size",
-        x="-1",
-        y="350",
-        xunits="pixels",
-        yunits="pixels"
-    )
+  
 # =====================================================
 # CREAR PLACEMARKS
 # =====================================================
