@@ -522,6 +522,51 @@ print(f"Grupos detectados: {len(grupos)}")
 
 print(f"Grupos tras el filtrado: {len(grupos)}")
 
+# =====================================================
+# MENSAJE SI NO HAY INCENDIOS
+# =====================================================
+
+if len(grupos) == 0:
+
+    placemark = ET.SubElement(
+        documento,
+        "Placemark",
+    )
+
+    ET.SubElement(
+        placemark,
+        "name",
+    ).text = "Sin incendios activos"
+
+    descripcion = """
+    <![CDATA[
+    <h2>✅ Sin incendios activos</h2>
+
+    <p>
+    No hay incendios activos detectados por NASA FIRMS
+    en España durante la última actualización.
+    </p>
+
+    <p>
+    La actualización del mapa se ha realizado correctamente.
+    </p>
+    ]]>
+    """
+
+    ET.SubElement(
+        placemark,
+        "description",
+    ).text = descripcion
+
+    punto = ET.SubElement(
+        placemark,
+        "Point",
+    )
+
+    ET.SubElement(
+        punto,
+        "coordinates",
+    ).text = "-3.7038,40.4168,0"
 
 # =====================================================
 # CREAR PLACEMARKS
