@@ -66,6 +66,7 @@ with open("fires.csv", "wb") as salida:
         print(repr(respuesta.text[:300]))
 
         lineas = respuesta.text.strip().splitlines()
+        print("Número de líneas:", len(lineas))
 
         if len(lineas) <= 1:
             continue
