@@ -57,7 +57,7 @@ with open("fires.csv", "wb") as salida:
 
         print(f"  -> {source}")
     
-                respuesta = None
+        respuesta = None
 
         for intento in range(5):
             try:
