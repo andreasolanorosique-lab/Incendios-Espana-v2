@@ -59,10 +59,15 @@ with open("fires.csv", "wb") as salida:
 
         respuesta = requests.get(url, timeout=120)
         respuesta.raise_for_status()
+
         print("Código:", respuesta.status_code)
         print("URL:", url)
         print("Primeros 300 caracteres:")
         print(repr(respuesta.text[:300]))
+
+        lineas = respuesta.text.strip().splitlines()
+
+        if len(lineas) <= 1:
 
 lineas = respuesta.text.strip().splitlines()
         lineas = respuesta.text.strip().splitlines()
