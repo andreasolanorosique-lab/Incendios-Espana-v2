@@ -909,7 +909,7 @@ except AttributeError:
     pass
 
 tree.write(
-    "incendios_actual.kml",
+    "incendios_live.kml",
     encoding="utf-8",
     xml_declaration=True,
 )
@@ -919,5 +919,5 @@ print("KML generado correctamente")
 print(f"Focos originales : {len(focos)}")
 print(f"Grupos creados   : {len(grupos)}")
 print(f"Gasoductos       : {len(gasoductos)}")
-print("Archivo: incendios_actual.kml")
+print("Archivo: incendios_live.kml")
 print("========================================")
