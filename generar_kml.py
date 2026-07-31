@@ -584,55 +584,65 @@ if len(grupos) == 0:
         xunits="fraction",
         yunits="fraction"
     )
-    placemark = ET.SubElement(
-        documento,
-        "Placemark",
-    )
-    ET.SubElement(
-    placemark,
-    "styleUrl",
-    ).text = "#green"
-    
-    ET.SubElement(
-    placemark,
-    "styleUrl",
-    ).text = "#green"
+   if len(grupos) == 0:
+
+    print(">>> SIN INCENDIOS <<<")
+
+    overlay = ET.SubElement(documento, "ScreenOverlay")
 
     ET.SubElement(
-        placemark,
-        "name",
-    ).text = "Sin incendios activos"
+        overlay,
+        "name"
+    ).text = "Sin incendios"
 
-    descripcion = """
-    <![CDATA[
-    <h2>✅ Sin incendios activos</h2>
-
-    <p>
-    No hay incendios activos detectados por NASA FIRMS
-    en España durante la última actualización.
-    </p>
-
-    <p>
-    La actualización del mapa se ha realizado correctamente.
-    </p>
-    ]]>
-    """
-
-    ET.SubElement(
-        placemark,
-        "description",
-    ).text = descripcion
-
-    punto = ET.SubElement(
-        placemark,
-        "Point",
+    icon = ET.SubElement(
+        overlay,
+        "Icon"
     )
 
     ET.SubElement(
-        punto,
-        "coordinates",
-    ).text = "-3.7038,40.4168,0"
+        icon,
+        "href"
+    ).text = (
+        "https://andreasolanorosique-lab.github.io/"
+        "Incendios-Espana-v2/icons/no_incendios.png"
+    )
 
+    ET.SubElement(
+        overlay,
+        "overlayXY",
+        x="0",
+        y="0",
+        xunits="fraction",
+        yunits="fraction"
+    )
+
+    ET.SubElement(
+        overlay,
+        "screenXY",
+        x="0.08",
+        y="0.12",
+        xunits="fraction",
+        yunits="fraction"
+    )
+
+    ET.SubElement(
+        overlay,
+        "rotationXY",
+        x="0",
+        y="0",
+        xunits="fraction",
+        yunits="fraction"
+    )
+
+    ET.SubElement(
+        overlay,
+        "size",
+        x="-1",
+        y="350",
+        xunits="pixels",
+        yunits="pixels"
+    )
 # =====================================================
 # CREAR PLACEMARKS
 # =====================================================
