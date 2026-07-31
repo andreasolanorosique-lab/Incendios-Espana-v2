@@ -56,13 +56,7 @@ with open("fires.csv", "wb") as salida:
         )
 
         print(f"  -> {source}")
-    import socket
-
-    try:
-    print("Resolviendo host...")
-    print(socket.gethostbyname("firms.modaps.eosdis.nasa.gov"))
-    except Exception as e:
-    print("Error DNS:", e)
+    
         respuesta = requests.get(url, timeout=120)
         respuesta.raise_for_status()
 
