@@ -533,7 +533,11 @@ if len(grupos) == 0:
         documento,
         "Placemark",
     )
-
+    ET.SubElement(
+    placemark,
+    "styleUrl",
+    ).text = "#green"
+    
     ET.SubElement(
     placemark,
     "styleUrl",
