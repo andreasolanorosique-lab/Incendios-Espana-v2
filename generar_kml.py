@@ -52,11 +52,17 @@ with open("fires.csv", "wb") as salida:
 
         url = (
             "https://firms.modaps.eosdis.nasa.gov/api/area/csv/"
-            f"{MAP_KEY}/{source}/{BBOX}/5"
+            f"{MAP_KEY}/{source}/{BBOX}/1"
         )
 
         print(f"  -> {source}")
+    import socket
 
+    try:
+    print("Resolviendo host...")
+    print(socket.gethostbyname("firms.modaps.eosdis.nasa.gov"))
+    except Exception as e:
+    print("Error DNS:", e)
         respuesta = requests.get(url, timeout=120)
         respuesta.raise_for_status()
 
