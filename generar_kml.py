@@ -535,6 +535,11 @@ if len(grupos) == 0:
     )
 
     ET.SubElement(
+    placemark,
+    "styleUrl",
+    ).text = "#green"
+
+    ET.SubElement(
         placemark,
         "name",
     ).text = "Sin incendios activos"
