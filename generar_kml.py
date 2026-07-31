@@ -57,8 +57,24 @@ with open("fires.csv", "wb") as salida:
 
         print(f"  -> {source}")
     
-        respuesta = requests.get(url, timeout=120)
-        respuesta.raise_for_status()
+                respuesta = None
+
+        for intento in range(5):
+            try:
+                print(f"Intento {intento + 1}/5")
+
+                respuesta = requests.get(url, timeout=120)
+                respuesta.raise_for_status()
+                break
+
+            except requests.exceptions.RequestException as e:
+                print(f"Error de conexión: {e}")
+
+                if intento == 4:
+                    raise
+
+                print("Reintentando en 15 segundos...")
+                time.sleep(15)
 
         print("Código:", respuesta.status_code)
         print("URL:", url)
