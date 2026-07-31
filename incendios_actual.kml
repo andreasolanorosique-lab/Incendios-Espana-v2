@@ -67,6 +67,7 @@
       </PolyStyle>
     </Style>
     <Placemark>
+      <styleUrl>#green</styleUrl>
       <name>Sin incendios activos</name>
       <description>
     &lt;![CDATA[
