@@ -527,6 +527,7 @@ print(f"Grupos tras el filtrado: {len(grupos)}")
 # =====================================================
 
 if len(grupos) == 0:
+    print(">>> Entrando en el bloque SIN INCENDIOS <<<")
 
     placemark = ET.SubElement(
         documento,
