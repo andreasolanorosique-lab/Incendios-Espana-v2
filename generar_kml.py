@@ -69,7 +69,6 @@ with open("fires.csv", "wb") as salida:
 
         if len(lineas) <= 1:
 
-lineas = respuesta.text.strip().splitlines()
         lineas = respuesta.text.strip().splitlines()
 
         if len(lineas) <= 1:
