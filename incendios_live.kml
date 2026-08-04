@@ -9004,6 +9004,88 @@
         <coordinates>3.89512,43.91433,0</coordinates>
       </Point>
     </Placemark>
+    <Placemark>
+      <styleUrl>#area_amarilla</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-7.35708,39.87806898240888,0 -7.356774754984913,39.878048487934876,0 -7.356478785218697,39.877987627263195,0 -7.356201084062113,39.87788824971849,0 -7.355950089672519,39.87775337499643,0 -7.355733428572708,39.87758710139253,0 -7.355557683900533,39.877394481253994,0 -7.355428195383606,39.8771813674416,0 -7.35534889711673,39.876954235469924,0 -7.355322198068428,39.87671998673293,0 -7.355348908942252,39.87648573879604,0 -7.35542821760832,39.876258609128165,0 -7.355557713843807,39.8760454988454,0 -7.355733462622943,39.8758528830366,0 -7.355950123722756,39.8756866140403,0 -7.35620111400539,39.87555174364797,0 -7.35647880744341,39.875452369632896,0 -7.356774766810437,39.87539151126502,0 -7.35708,39.87537101759112,0 -7.357385233189563,39.87539151126502,0 -7.35768119255659,39.875452369632896,0 -7.35795888599461,39.87555174364797,0 -7.358209876277244,39.8756866140403,0 -7.358426537377056,39.8758528830366,0 -7.358602286156192,39.8760454988454,0 -7.35873178239168,39.876258609128165,0 -7.358811091057747,39.87648573879604,0 -7.358837801931573,39.87671998673293,0 -7.358811102883271,39.876954235469924,0 -7.358731804616394,39.8771813674416,0 -7.358602316099467,39.877394481253994,0 -7.358426571427292,39.87758710139253,0 -7.3582099103274805,39.87775337499643,0 -7.357958915937886,39.87788824971849,0 -7.357681214781302,39.877987627263195,0 -7.357385245015086,39.878048487934876,0 -7.35708,39.87806898240888,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#pink</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+
+    &lt;table border="0" cellpadding="4"&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;FRP máximo&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;10.2 MW&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Baja&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2026-08-04&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;1431 UTC&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;N21&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;VIIRS&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Población más cercana&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Herrera de Alcántara&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Distancia&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;27.0 km&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;39.876720&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;-7.357080&lt;/td&gt;
+        &lt;/tr&gt;
+
+    &lt;/table&gt;
+
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-7.35708,39.87672,0</coordinates>
+      </Point>
+    </Placemark>
     <Folder>
       <name>Gasoductos</name>
       <Placemark>
