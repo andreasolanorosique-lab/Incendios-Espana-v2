@@ -9824,6 +9824,88 @@
         <coordinates>3.5719,43.52599,0</coordinates>
       </Point>
     </Placemark>
+    <Placemark>
+      <styleUrl>#area_amarilla</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-5.87676,37.22625898240888,0 -5.876465811659253,37.22623848797114,0 -5.87618056254999,37.22617762740386,0 -5.875912920233267,37.22607825001909,0 -5.875671017190647,37.22594337549323,0 -5.8754622036860535,37.225777102098114,0 -5.875292824412137,37.225584482155774,0 -5.875168025710003,37.2253713685033,0 -5.875091599219839,37.22514423663602,0 -5.8750658667106626,37.22490998793528,0 -5.875091609584148,37.22467573996213,0 -5.875168045188532,37.22444861018986,0 -5.875292850655489,37.224235499747145,0 -5.875462233528892,37.22404288374215,0 -5.875671047033485,37.22387661453707,0 -5.875912946476618,37.22374174394855,0 -5.87618058202852,37.223642369773536,0 -5.876465822023563,37.223581511301276,0 -5.87676,37.22356101759113,0 -5.877054177976438,37.223581511301276,0 -5.877339417971481,37.223642369773536,0 -5.8776070535233815,37.22374174394855,0 -5.877848952966516,37.22387661453707,0 -5.878057766471109,37.22404288374215,0 -5.878227149344512,37.224235499747145,0 -5.8783519548114676,37.22444861018986,0 -5.878428390415853,37.22467573996213,0 -5.878454133289338,37.22490998793528,0 -5.8784284007801615,37.22514423663602,0 -5.8783519742899975,37.2253713685033,0 -5.878227175587864,37.225584482155774,0 -5.878057796313947,37.225777102098114,0 -5.877848982809354,37.22594337549323,0 -5.877607079766733,37.22607825001909,0 -5.8773394374500105,37.22617762740386,0 -5.877054188340748,37.22623848797114,0 -5.87676,37.22625898240888,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#pink</styleUrl>
+      <name />
+      <description>
+    &lt;![CDATA[
+    &lt;h2&gt;🔥 Incendio activo&lt;/h2&gt;
+
+    &lt;table border="0" cellpadding="4"&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Focos agrupados&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;1&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;FRP máximo&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;28.1 MW&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Confianza&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Baja&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;2026-08-21&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Hora&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;1412 UTC&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Satélite&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;N21&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Instrumento&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;VIIRS&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Población más cercana&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;Dos Hermanas&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Distancia&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;7.7 km&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Latitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;37.224910&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+            &lt;td&gt;&lt;b&gt;Longitud&lt;/b&gt;&lt;/td&gt;
+            &lt;td&gt;-5.876760&lt;/td&gt;
+        &lt;/tr&gt;
+
+    &lt;/table&gt;
+
+    ]]&gt;
+    </description>
+      <Point>
+        <coordinates>-5.87676,37.22491,0</coordinates>
+      </Point>
+    </Placemark>
     <Folder>
       <name>Gasoductos</name>
       <Placemark>
